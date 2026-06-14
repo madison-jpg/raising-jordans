@@ -279,71 +279,148 @@
   <!-- MILESTONE MAP -->
   <div class="map-wrap">
   <svg class="map-svg" viewBox="0 0 820 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive milestone map 12 months through 4 years">
-    <!-- MAP FRAME -->
-    <rect x="0" y="0" width="820" height="500" fill="#EDE0C8"/>
-    <rect x="11" y="11" width="798" height="478" rx="6" fill="#FDF8F0"/>
-    <rect x="18" y="18" width="784" height="464" rx="4" fill="none" stroke="#D4C0A0" stroke-width="1"/>
 
-    <!-- TERRAIN: hills (behind path, lower area) -->
-    <ellipse cx="160" cy="455" rx="135" ry="52" fill="#E4D8C0" opacity=".55"/>
-    <ellipse cx="110" cy="470" rx="90"  ry="38" fill="#DDD0B8" opacity=".5"/>
-    <ellipse cx="420" cy="465" rx="115" ry="48" fill="#E4D8C0" opacity=".45"/>
-    <ellipse cx="690" cy="450" rx="130" ry="50" fill="#E4D8C0" opacity=".55"/>
-    <ellipse cx="760" cy="468" rx="80"  ry="34" fill="#DDD0B8" opacity=".45"/>
+    <!-- ═══ FRAME ═══ -->
+    <rect x="0" y="0" width="820" height="500" fill="#6B4922"/>
+    <rect x="5" y="5" width="810" height="490" fill="none" stroke="#4A3010" stroke-width="2.5"/>
+    <rect x="10" y="10" width="800" height="480" fill="none" stroke="#A07E38" stroke-width="1"/>
 
-    <!-- TERRAIN: trees (lollipop map style) -->
-    <g opacity=".8">
-      <!-- Grove left of 12m -->
-      <line x1="30"  y1="355" x2="30"  y2="338" stroke="#9B8572" stroke-width="1.5"/><circle cx="30"  cy="330" r="9"  fill="#8B9E72"/>
-      <line x1="46"  y1="368" x2="46"  y2="349" stroke="#9B8572" stroke-width="1.5"/><circle cx="46"  cy="340" r="10" fill="#7A8E62"/>
-      <line x1="58"  y1="357" x2="58"  y2="342" stroke="#9B8572" stroke-width="1.5"/><circle cx="58"  cy="334" r="8"  fill="#8B9E72"/>
-      <!-- Trees between 18m-2yr -->
-      <line x1="350" y1="373" x2="350" y2="356" stroke="#9B8572" stroke-width="1.5"/><circle cx="350" cy="348" r="9"  fill="#7A8E62"/>
-      <line x1="364" y1="380" x2="364" y2="362" stroke="#9B8572" stroke-width="1.5"/><circle cx="364" cy="353" r="8"  fill="#8B9E72"/>
-      <!-- Grove right area -->
-      <line x1="768" y1="348" x2="768" y2="332" stroke="#9B8572" stroke-width="1.5"/><circle cx="768" cy="324" r="9"  fill="#8B9E72"/>
-      <line x1="782" y1="360" x2="782" y2="342" stroke="#9B8572" stroke-width="1.5"/><circle cx="782" cy="333" r="10" fill="#7A8E62"/>
-      <line x1="795" y1="350" x2="795" y2="335" stroke="#9B8572" stroke-width="1.5"/><circle cx="795" cy="327" r="8"  fill="#8B9E72"/>
+    <!-- ═══ PARCHMENT ═══ -->
+    <rect x="7" y="7" width="806" height="486" fill="#F0DFA0"/>
+    <ellipse cx="410" cy="250" rx="350" ry="230" fill="#E8D080" opacity=".3"/>
+    <ellipse cx="18"  cy="18"  rx="75" ry="65"  fill="#B08020" opacity=".22"/>
+    <ellipse cx="802" cy="18"  rx="75" ry="65"  fill="#B08020" opacity=".2"/>
+    <ellipse cx="18"  cy="482" rx="80" ry="68"  fill="#907010" opacity=".24"/>
+    <ellipse cx="802" cy="482" rx="78" ry="66"  fill="#907010" opacity=".22"/>
+
+    <!-- ═══ WATER AREAS ═══ -->
+    <path d="M620,7 L813,7 L813,165 L745,143 L685,103 L642,62 L620,7 Z" fill="#5A8CB5" opacity=".52"/>
+    <path d="M7,418 L7,493 L118,493 L96,458 L56,432 L7,418 Z" fill="#5A8CB5" opacity=".48"/>
+    <path d="M758,440 L813,440 L813,493 L738,493 L718,465 L758,440 Z" fill="#5A8CB5" opacity=".46"/>
+    <path d="M272,462 L568,462 L585,493 L255,493 Z" fill="#4A82AE" opacity=".42"/>
+
+    <!-- Wave lines – top right -->
+    <path d="M644,30 Q664,24 684,30 Q704,36 724,30 Q744,24 764,30" fill="none" stroke="#84B8D8" stroke-width="1.3" opacity=".85"/>
+    <path d="M660,52 Q682,46 704,52 Q726,58 748,52 Q770,46 792,52" fill="none" stroke="#84B8D8" stroke-width="1.3" opacity=".78"/>
+    <path d="M700,76 Q720,70 740,76 Q760,82 780,76 Q800,70 812,76" fill="none" stroke="#84B8D8" stroke-width="1.2" opacity=".70"/>
+    <path d="M710,100 Q730,94 750,100 Q770,106 790,100" fill="none" stroke="#84B8D8" stroke-width="1.1" opacity=".65"/>
+    <!-- Wave lines – bottom left -->
+    <path d="M10,440 Q28,434 46,440 Q64,446 82,440" fill="none" stroke="#84B8D8" stroke-width="1.2" opacity=".75"/>
+    <path d="M10,460 Q30,454 50,460 Q70,466 90,460" fill="none" stroke="#84B8D8" stroke-width="1.2" opacity=".70"/>
+    <!-- Wave lines – bottom center -->
+    <path d="M298,472 Q320,466 342,472 Q364,478 386,472 Q408,466 430,472 Q452,478 474,472 Q496,466 518,472 Q540,478 556,472" fill="none" stroke="#84B8D8" stroke-width="1.2" opacity=".72"/>
+    <!-- Wave lines – bottom right -->
+    <path d="M730,456 Q752,450 774,456 Q796,462 812,456" fill="none" stroke="#84B8D8" stroke-width="1.1" opacity=".68"/>
+
+    <!-- ═══ LAND TERRAIN ═══ -->
+    <ellipse cx="180" cy="493" rx="160" ry="58" fill="#B8A455" opacity=".5"/>
+    <ellipse cx="148" cy="482" rx="105" ry="42" fill="#A89445" opacity=".45"/>
+    <ellipse cx="400" cy="490" rx="118" ry="46" fill="#B8A455" opacity=".42"/>
+    <ellipse cx="650" cy="488" rx="128" ry="52" fill="#B8A455" opacity=".48"/>
+    <ellipse cx="700" cy="476" rx="88"  ry="36" fill="#A89445" opacity=".40"/>
+    <ellipse cx="85"  cy="210" rx="60"  ry="36" fill="#C4B060" opacity=".28"/>
+    <ellipse cx="500" cy="395" rx="70"  ry="28" fill="#C4B060" opacity=".22"/>
+
+    <!-- ═══ MOUNTAINS ═══ -->
+    <!-- Upper-right cluster (decorative, above 3yr/4yr path) -->
+    <polygon points="676,96  658,136 694,136" fill="#9A6A2E" opacity=".78"/>
+    <polygon points="701,86  681,128 721,128" fill="#8A5A1E" opacity=".82"/>
+    <polygon points="730,100 710,138 750,138" fill="#9A6A2E" opacity=".74"/>
+    <!-- Snow caps -->
+    <polygon points="701,86 692,105 710,105" fill="#ECD8B0" opacity=".65"/>
+    <polygon points="730,100 721,116 739,116" fill="#ECD8B0" opacity=".60"/>
+    <!-- Left-middle small mountains (between 12m and 18m) -->
+    <polygon points="166,376 150,402 182,402" fill="#9A6A2E" opacity=".52"/>
+    <polygon points="190,369 172,399 208,399" fill="#8A5A1E" opacity=".58"/>
+    <!-- Bottom-right small mountain -->
+    <polygon points="774,432 757,460 791,460" fill="#9A6A2E" opacity=".48"/>
+
+    <!-- ═══ TREES ═══ -->
+    <!-- Grove near 12m -->
+    <g opacity=".88">
+      <line x1="34"  y1="332" x2="34"  y2="312" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="34"  cy="304" r="12" fill="#5A7840"/>
+      <line x1="52"  y1="344" x2="52"  y2="322" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="52"  cy="313" r="14" fill="#4C6C36"/>
+      <line x1="69"  y1="335" x2="69"  y2="316" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="69"  cy="308" r="10" fill="#5A7840"/>
+    </g>
+    <!-- Grove between 18m and 2yr -->
+    <g opacity=".88">
+      <line x1="340" y1="380" x2="340" y2="360" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="340" cy="352" r="11" fill="#4C6C36"/>
+      <line x1="357" y1="388" x2="357" y2="366" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="357" cy="357" r="9"  fill="#5A7840"/>
+      <line x1="372" y1="380" x2="372" y2="363" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="372" cy="355" r="8"  fill="#4C6C36"/>
+    </g>
+    <!-- Grove right side -->
+    <g opacity=".82">
+      <line x1="775" y1="352" x2="775" y2="330" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="775" cy="322" r="11" fill="#5A7840"/>
+      <line x1="792" y1="364" x2="792" y2="340" stroke="#7A5C2E" stroke-width="1.5"/>
+      <circle cx="792" cy="331" r="13" fill="#4C6C36"/>
     </g>
 
-    <!-- COMPASS ROSE -->
-    <g transform="translate(46,66)">
-      <circle cx="0" cy="0" r="18" fill="#FDF8F0" stroke="#C4A882" stroke-width="1.2"/>
-      <polygon points="0,-15 3,-5 -3,-5"  fill="#B85C38"/>
-      <polygon points="0,15  3,5  -3,5"  fill="#C4A882"/>
-      <polygon points="15,0  5,-3  5,3"  fill="#C4A882"/>
-      <polygon points="-15,0 -5,-3 -5,3" fill="#C4A882"/>
-      <circle  cx="0" cy="0" r="3" fill="#C4A882"/>
-      <text x="0"   y="-20" text-anchor="middle" font-family="Inter,sans-serif" font-size="8"   fill="#7A6040" font-weight="700">N</text>
-      <text x="0"   y="28"  text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#7A6040">S</text>
-      <text x="24"  y="3"   text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#7A6040">E</text>
-      <text x="-24" y="3"   text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#7A6040">W</text>
+    <!-- ═══ TITLE SCROLL ═══ -->
+    <rect x="224" y="13" width="372" height="58" rx="5" fill="#F0E098" stroke="#9B7225" stroke-width="2"/>
+    <ellipse cx="226" cy="42" rx="7" ry="29" fill="#C4A040" opacity=".28"/>
+    <line x1="224" y1="13" x2="224" y2="71" stroke="#9B7225" stroke-width="1.5" opacity=".65"/>
+    <ellipse cx="594" cy="42" rx="7" ry="29" fill="#C4A040" opacity=".28"/>
+    <line x1="596" y1="13" x2="596" y2="71" stroke="#9B7225" stroke-width="1.5" opacity=".65"/>
+    <line x1="234" y1="21" x2="586" y2="21" stroke="#C4A040" stroke-width="0.8" opacity=".5"/>
+    <line x1="234" y1="63" x2="586" y2="63" stroke="#C4A040" stroke-width="0.8" opacity=".5"/>
+    <text x="410" y="42" text-anchor="middle" font-family="Fraunces,serif" font-size="18" fill="#7A3A10" font-weight="900" letter-spacing=".1em">THE JOURNEY TO CAPABLE</text>
+    <text x="410" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#9B6025" letter-spacing=".2em">MILESTONES · 12 MONTHS THROUGH 4 YEARS</text>
+
+    <!-- ═══ COMPASS ROSE (top-left) ═══ -->
+    <g transform="translate(56,87)">
+      <circle cx="0" cy="0" r="32" fill="#F0E098" stroke="#9B7225" stroke-width="1.8"/>
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#C4A040" stroke-width="0.8" stroke-dasharray="3 3"/>
+      <polygon points="0,-28 3.5,-8 -3.5,-8"  fill="#8B3018"/>
+      <polygon points="0,28  3.5,8  -3.5,8"   fill="#C4A040"/>
+      <polygon points="28,0  8,-3.5  8,3.5"   fill="#C4A040"/>
+      <polygon points="-28,0 -8,-3.5 -8,3.5"  fill="#C4A040"/>
+      <polygon points="20,-20 6,-6  14,-2"     fill="#C4A040" opacity=".72"/>
+      <polygon points="20,20  6,6   14,2"      fill="#C4A040" opacity=".72"/>
+      <polygon points="-20,20 -6,6  -14,2"    fill="#C4A040" opacity=".72"/>
+      <polygon points="-20,-20 -6,-6 -14,-2"  fill="#C4A040" opacity=".72"/>
+      <circle cx="0" cy="0" r="5"   fill="#C4A040"/>
+      <circle cx="0" cy="0" r="2.5" fill="#8B3018"/>
+      <text x="0"   y="-35" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7A3A10" font-weight="700">N</text>
+      <text x="0"   y="46"  text-anchor="middle" font-family="Inter,sans-serif" font-size="8"   fill="#9B6025">S</text>
+      <text x="38"  y="4"   text-anchor="middle" font-family="Inter,sans-serif" font-size="8"   fill="#9B6025">E</text>
+      <text x="-38" y="4"   text-anchor="middle" font-family="Inter,sans-serif" font-size="8"   fill="#9B6025">W</text>
     </g>
 
-    <!-- TITLE CARTOUCHE -->
-    <rect x="285" y="22" width="250" height="36" rx="9" fill="#FDF8F0" stroke="#C4A882" stroke-width="1.5"/>
-    <text x="410" y="44" text-anchor="middle" font-family="Fraunces,serif" font-size="13" fill="#8B7355" font-weight="700" letter-spacing=".14em">THE JOURNEY TO CAPABLE</text>
-
-    <!-- ROAD (3-layer: shadow, surface, dashes) -->
+    <!-- ═══ DASHED TRAIL ═══ -->
     <path d="M95,372 C148,348 204,314 252,304 C304,293 362,332 422,340 C480,348 530,270 582,258 C632,246 678,270 732,278"
-          fill="none" stroke="#CDB9A0" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+          fill="none" stroke="#8B6020" stroke-width="5" stroke-linecap="round" opacity=".18"/>
     <path d="M95,372 C148,348 204,314 252,304 C304,293 362,332 422,340 C480,348 530,270 582,258 C632,246 678,270 732,278"
-          fill="none" stroke="#F0E6D5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M95,372 C148,348 204,314 252,304 C304,293 362,332 422,340 C480,348 530,270 582,258 C632,246 678,270 732,278"
-          fill="none" stroke="#D8CCBA" stroke-width="1.5" stroke-dasharray="12 9" stroke-linecap="round"/>
+          fill="none" stroke="#7A5012" stroke-width="2.5" stroke-dasharray="11 8" stroke-linecap="round"/>
 
-    <!-- START flag below 12m -->
-    <line x1="95" y1="395" x2="95" y2="410" stroke="#C4A882" stroke-width="1.5"/>
-    <polygon points="95,410 95,422 106,416" fill="#C4A882"/>
-    <text x="95" y="438" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#8B7355" font-weight="700" letter-spacing=".1em">START</text>
+    <!-- ═══ START FLAG ═══ -->
+    <line x1="98" y1="396" x2="98" y2="416" stroke="#7A5012" stroke-width="1.8"/>
+    <polygon points="98,396 118,402 98,408" fill="#8B3018"/>
+    <text x="98" y="430" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7A4010" font-weight="700" letter-spacing=".1em">START</text>
 
-    <!-- DESTINATION star at 4yr end -->
-    <polygon points="780,265 782,272 789,272 784,277 786,284 780,280 774,284 776,277 771,272 778,272" fill="#C4A882" opacity=".9"/>
+    <!-- ═══ TREASURE CHEST near 4yr ═══ -->
+    <g transform="translate(766,290)">
+      <rect x="-11" y="-9"  width="22" height="16" rx="2.5" fill="#C49020" stroke="#7A5012" stroke-width="1.2"/>
+      <rect x="-11" y="-15" width="22" height="9"  rx="3"   fill="#D4A830" stroke="#7A5012" stroke-width="1.2"/>
+      <line x1="-11" y1="-6" x2="11" y2="-6" stroke="#7A5012" stroke-width="0.8"/>
+      <circle cx="0" cy="0" r="2.8" fill="#7A5012"/>
+      <polygon points="0,-22 1.5,-18 5.5,-18 2.5,-15 3.5,-11 0,-14 -3.5,-11 -2.5,-15 -5.5,-18 -1.5,-18" fill="#D4A830" opacity=".9"/>
+    </g>
+
+    <!-- ═══ DOMAIN CONNECTORS ═══ -->
+    <line x1="95"  y1="324" x2="95"  y2="286" stroke="#9B7025" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <line x1="252" y1="256" x2="252" y2="218" stroke="#9B7025" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <line x1="422" y1="292" x2="422" y2="254" stroke="#9B7025" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <line x1="582" y1="210" x2="582" y2="172" stroke="#9B7025" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <line x1="732" y1="230" x2="732" y2="192" stroke="#9B7025" stroke-width="1.2" stroke-dasharray="4 3"/>
 
     <!-- ════════════ 12 MONTHS · color #E09060 ════════════ -->
-    <!-- Domain connector -->
-    <line x1="95" y1="324" x2="95" y2="286" stroke="#D4C4B0" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <!-- Domain dots (2×2) -->
     <circle id="dot-12m-social"    class="map-dot" cx="76"  cy="270" r="14" fill="#B85C38" onclick="showMilestone('12m','social')"><title>12 Months · Social / Emotional</title></circle>
     <circle id="dot-12m-language"  class="map-dot" cx="114" cy="270" r="14" fill="#7A8B6F" onclick="showMilestone('12m','language')"><title>12 Months · Language</title></circle>
     <circle id="dot-12m-cognitive" class="map-dot" cx="76"  cy="298" r="14" fill="#C49A3C" onclick="showMilestone('12m','cognitive')"><title>12 Months · Cognitive</title></circle>
@@ -352,15 +429,12 @@
     <text x="114" y="274" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">L</text>
     <text x="76"  y="302" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">C</text>
     <text x="114" y="302" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">M</text>
-    <!-- Map pin: circle + teardrop -->
-    <circle cx="95" cy="346" r="2" fill="#C07040" opacity=".25"/>
-    <circle cx="95" cy="346" r="24" fill="#E09060" stroke="#FDF8F0" stroke-width="2.5"/>
+    <circle cx="95" cy="346" r="24" fill="#E09060" stroke="#F0E098" stroke-width="2.5"/>
     <polygon points="95,372 85,360 105,360" fill="#E09060"/>
     <text x="95" y="342" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="13" fill="#fff" pointer-events="none">12</text>
     <text x="95" y="355" text-anchor="middle" font-family="Fraunces,serif" font-weight="600" font-size="8.5" fill="rgba(255,255,255,.9)" pointer-events="none">MOS</text>
 
     <!-- ════════════ 18 MONTHS · color #B85C38 ════════════ -->
-    <line x1="252" y1="256" x2="252" y2="218" stroke="#D4C4B0" stroke-width="1.5" stroke-dasharray="4 3"/>
     <circle id="dot-18m-social"    class="map-dot" cx="233" cy="202" r="14" fill="#B85C38" onclick="showMilestone('18m','social')"><title>18 Months · Social / Emotional</title></circle>
     <circle id="dot-18m-language"  class="map-dot" cx="271" cy="202" r="14" fill="#7A8B6F" onclick="showMilestone('18m','language')"><title>18 Months · Language</title></circle>
     <circle id="dot-18m-cognitive" class="map-dot" cx="233" cy="230" r="14" fill="#C49A3C" onclick="showMilestone('18m','cognitive')"><title>18 Months · Cognitive</title></circle>
@@ -369,13 +443,12 @@
     <text x="271" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">L</text>
     <text x="233" y="234" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">C</text>
     <text x="271" y="234" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">M</text>
-    <circle cx="252" cy="278" r="24" fill="#B85C38" stroke="#FDF8F0" stroke-width="2.5"/>
+    <circle cx="252" cy="278" r="24" fill="#B85C38" stroke="#F0E098" stroke-width="2.5"/>
     <polygon points="252,304 242,292 262,292" fill="#B85C38"/>
     <text x="252" y="274" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="13" fill="#fff" pointer-events="none">18</text>
     <text x="252" y="287" text-anchor="middle" font-family="Fraunces,serif" font-weight="600" font-size="8.5" fill="rgba(255,255,255,.9)" pointer-events="none">MOS</text>
 
     <!-- ════════════ 2 YEARS · color #C49A3C ════════════ -->
-    <line x1="422" y1="292" x2="422" y2="254" stroke="#D4C4B0" stroke-width="1.5" stroke-dasharray="4 3"/>
     <circle id="dot-2yr-social"    class="map-dot" cx="403" cy="238" r="14" fill="#B85C38" onclick="showMilestone('2yr','social')"><title>2 Years · Social / Emotional</title></circle>
     <circle id="dot-2yr-language"  class="map-dot" cx="441" cy="238" r="14" fill="#7A8B6F" onclick="showMilestone('2yr','language')"><title>2 Years · Language</title></circle>
     <circle id="dot-2yr-cognitive" class="map-dot" cx="403" cy="266" r="14" fill="#C49A3C" onclick="showMilestone('2yr','cognitive')"><title>2 Years · Cognitive</title></circle>
@@ -384,13 +457,12 @@
     <text x="441" y="242" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">L</text>
     <text x="403" y="270" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">C</text>
     <text x="441" y="270" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">M</text>
-    <circle cx="422" cy="316" r="24" fill="#C49A3C" stroke="#FDF8F0" stroke-width="2.5"/>
+    <circle cx="422" cy="316" r="24" fill="#C49A3C" stroke="#F0E098" stroke-width="2.5"/>
     <polygon points="422,340 412,328 432,328" fill="#C49A3C"/>
     <text x="422" y="311" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="18" fill="#fff" pointer-events="none">2</text>
     <text x="422" y="326" text-anchor="middle" font-family="Fraunces,serif" font-weight="600" font-size="8.5" fill="rgba(255,255,255,.9)" pointer-events="none">YRS</text>
 
     <!-- ════════════ 3 YEARS · color #7A8B6F ════════════ -->
-    <line x1="582" y1="210" x2="582" y2="172" stroke="#D4C4B0" stroke-width="1.5" stroke-dasharray="4 3"/>
     <circle id="dot-3yr-social"    class="map-dot" cx="563" cy="156" r="14" fill="#B85C38" onclick="showMilestone('3yr','social')"><title>3 Years · Social / Emotional</title></circle>
     <circle id="dot-3yr-language"  class="map-dot" cx="601" cy="156" r="14" fill="#7A8B6F" onclick="showMilestone('3yr','language')"><title>3 Years · Language</title></circle>
     <circle id="dot-3yr-cognitive" class="map-dot" cx="563" cy="184" r="14" fill="#C49A3C" onclick="showMilestone('3yr','cognitive')"><title>3 Years · Cognitive</title></circle>
@@ -399,13 +471,12 @@
     <text x="601" y="160" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">L</text>
     <text x="563" y="188" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">C</text>
     <text x="601" y="188" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">M</text>
-    <circle cx="582" cy="234" r="24" fill="#7A8B6F" stroke="#FDF8F0" stroke-width="2.5"/>
+    <circle cx="582" cy="234" r="24" fill="#7A8B6F" stroke="#F0E098" stroke-width="2.5"/>
     <polygon points="582,258 572,246 592,246" fill="#7A8B6F"/>
     <text x="582" y="229" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="18" fill="#fff" pointer-events="none">3</text>
     <text x="582" y="244" text-anchor="middle" font-family="Fraunces,serif" font-weight="600" font-size="8.5" fill="rgba(255,255,255,.9)" pointer-events="none">YRS</text>
 
     <!-- ════════════ 4 YEARS · color #4A7B9A ════════════ -->
-    <line x1="732" y1="230" x2="732" y2="192" stroke="#D4C4B0" stroke-width="1.5" stroke-dasharray="4 3"/>
     <circle id="dot-4yr-social"    class="map-dot" cx="713" cy="176" r="14" fill="#B85C38" onclick="showMilestone('4yr','social')"><title>4 Years · Social / Emotional</title></circle>
     <circle id="dot-4yr-language"  class="map-dot" cx="751" cy="176" r="14" fill="#7A8B6F" onclick="showMilestone('4yr','language')"><title>4 Years · Language</title></circle>
     <circle id="dot-4yr-cognitive" class="map-dot" cx="713" cy="204" r="14" fill="#C49A3C" onclick="showMilestone('4yr','cognitive')"><title>4 Years · Cognitive</title></circle>
@@ -414,15 +485,16 @@
     <text x="751" y="180" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">L</text>
     <text x="713" y="208" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">C</text>
     <text x="751" y="208" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#fff" font-weight="700" pointer-events="none">M</text>
-    <circle cx="732" cy="254" r="24" fill="#4A7B9A" stroke="#FDF8F0" stroke-width="2.5"/>
+    <circle cx="732" cy="254" r="24" fill="#4A7B9A" stroke="#F0E098" stroke-width="2.5"/>
     <polygon points="732,278 722,266 742,266" fill="#4A7B9A"/>
     <text x="732" y="249" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="18" fill="#fff" pointer-events="none">4</text>
     <text x="732" y="264" text-anchor="middle" font-family="Fraunces,serif" font-weight="600" font-size="8.5" fill="rgba(255,255,255,.9)" pointer-events="none">YRS</text>
 
-    <!-- LEGEND BOX (bottom right) -->
-    <rect x="502" y="448" width="308" height="40" rx="6" fill="#FDF8F0" stroke="#C4A882" stroke-width="1"/>
-    <text x="656" y="464" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"   fill="#8B7355" font-weight="700" letter-spacing=".06em">TAP A DOT TO EXPLORE MILESTONES</text>
-    <text x="656" y="480" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#8B7355">S = Social  ·  L = Language  ·  C = Cognitive  ·  M = Movement</text>
+    <!-- ═══ LEGEND ═══ -->
+    <rect x="488" y="450" width="320" height="38" rx="6" fill="#F0E098" stroke="#9B7225" stroke-width="1.3"/>
+    <text x="648" y="465" text-anchor="middle" font-family="Inter,sans-serif" font-size="9"   fill="#7A4010" font-weight="700" letter-spacing=".06em">TAP A DOT TO EXPLORE MILESTONES</text>
+    <text x="648" y="481" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7A4010">S = Social  ·  L = Language  ·  C = Cognitive  ·  M = Movement</text>
+
   </svg>
   </div>
 
