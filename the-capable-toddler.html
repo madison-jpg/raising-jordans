@@ -142,6 +142,20 @@
   .pr-l{font-family:'Fraunces';font-weight:600;color:var(--clay);width:32%}
   .printable tr:last-child td{border-bottom:0}
 
+  /* INTERACTIVE WORKBOOK PAGE */
+  .wb-page{margin:0 0 40px;padding:26px 28px;background:#fff;border:1px dashed var(--clay);border-radius:16px}
+  .wb-topic-head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;padding-bottom:14px;border-bottom:2px solid var(--clay-soft)}
+  .wb-num{font-family:'Fraunces';font-weight:900;font-size:24px;color:var(--clay);line-height:1}
+  .wb-title{font-family:'Fraunces';font-weight:700;font-size:21px;color:var(--ink);line-height:1.1}
+  .wb-field{display:block;width:100%;box-sizing:border-box;border:none;border-bottom:1.5px solid var(--line);background:transparent;font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);resize:none;padding:7px 3px 5px;outline:none;line-height:1.6;margin-bottom:4px}
+  .wb-field:focus{border-bottom-color:var(--clay);background:rgba(184,92,56,.03)}
+  .wb-field::placeholder{color:var(--muted);font-style:italic;font-size:13px}
+  @media print{
+    .wb-page{page-break-before:always;page-break-inside:avoid;border:none;padding:0;margin:0}
+    .wb-topic-head{border-bottom:2px solid #333}
+    .wb-field{border-bottom:1.5px solid #aaa!important;background:none!important;min-height:28px}
+    .wb-field::placeholder{color:transparent}
+  }
   /* CLOSE */
   .closer{text-align:center;padding:64px 0 40px}
   .closer .rule{width:54px;height:3px;background:var(--clay);margin:0 auto 24px;border-radius:3px}
@@ -228,7 +242,7 @@
     <div class="bt" onclick="showScreen('cover')">The Capable Toddler</div>
   </div>
   <button class="dl-btn" onclick="downloadPDF()">Download as PDF</button>
-  <div class="nav-group">Getting Started</div><a class="nav-link" data-target="welcome" href="#welcome" onclick="showScreen('welcome');return false">Welcome</a><a class="nav-link" data-target="pillars" href="#pillars" onclick="showScreen('pillars');return false">The Foundation</a><a class="nav-link" data-target="how" href="#how" onclick="showScreen('how');return false">How It Works</a><a class="nav-link" data-target="ages" href="#ages" onclick="showScreen('ages');return false">Milestone Map</a><div class="nav-group">The 20 Topics</div><a class="nav-link" data-target="ch1" href="#ch1" onclick="showScreen('ch1');return false"><span class="nav-n">01</span>Transitions</a><a class="nav-link" data-target="ch2" href="#ch2" onclick="showScreen('ch2');return false"><span class="nav-n">02</span>Meltdowns</a><a class="nav-link" data-target="ch3" href="#ch3" onclick="showScreen('ch3');return false"><span class="nav-n">03</span>Defiance</a><a class="nav-link" data-target="ch4" href="#ch4" onclick="showScreen('ch4');return false"><span class="nav-n">04</span>Screen Weaning</a><a class="nav-link" data-target="ch5" href="#ch5" onclick="showScreen('ch5');return false"><span class="nav-n">05</span>Sleep Resistance</a><a class="nav-link" data-target="ch6" href="#ch6" onclick="showScreen('ch6');return false"><span class="nav-n">06</span>Not Listening</a><a class="nav-link" data-target="ch7" href="#ch7" onclick="showScreen('ch7');return false"><span class="nav-n">07</span>Hitting &amp; Biting</a><a class="nav-link" data-target="ch8" href="#ch8" onclick="showScreen('ch8');return false"><span class="nav-n">08</span>Independence-Building</a><a class="nav-link" data-target="ch9" href="#ch9" onclick="showScreen('ch9');return false"><span class="nav-n">09</span>Eating</a><a class="nav-link" data-target="ch10" href="#ch10" onclick="showScreen('ch10');return false"><span class="nav-n">10</span>The "Why" Phase</a><a class="nav-link" data-target="ch11" href="#ch11" onclick="showScreen('ch11');return false"><span class="nav-n">11</span>Separation Anxiety</a><a class="nav-link" data-target="ch12" href="#ch12" onclick="showScreen('ch12');return false"><span class="nav-n">12</span>Sibling Dynamics</a><a class="nav-link" data-target="ch13" href="#ch13" onclick="showScreen('ch13');return false"><span class="nav-n">13</span>Emotional Regulation</a><a class="nav-link" data-target="ch14" href="#ch14" onclick="showScreen('ch14');return false"><span class="nav-n">14</span>Potty Training</a><a class="nav-link" data-target="ch15" href="#ch15" onclick="showScreen('ch15');return false"><span class="nav-n">15</span>Whining</a><a class="nav-link" data-target="ch16" href="#ch16" onclick="showScreen('ch16');return false"><span class="nav-n">16</span>Getting Dressed &amp; Ready</a><a class="nav-link" data-target="ch17" href="#ch17" onclick="showScreen('ch17');return false"><span class="nav-n">17</span>Public Behavior</a><a class="nav-link" data-target="ch18" href="#ch18" onclick="showScreen('ch18');return false"><span class="nav-n">18</span>Language &amp; Speech</a><a class="nav-link" data-target="ch19" href="#ch19" onclick="showScreen('ch19');return false"><span class="nav-n">19</span>Mom Guilt &amp; Consistency</a><a class="nav-link" data-target="ch20" href="#ch20" onclick="showScreen('ch20');return false"><span class="nav-n">20</span>Raising a Confident Kid</a><div class="nav-group">Toolkit</div><a class="nav-link" data-target="printables" href="#printables" onclick="showScreen('printables');return false">Printables</a><a class="nav-link" data-target="close" href="#close" onclick="showScreen('close');return false">The Close</a>
+  <div class="nav-group">Getting Started</div><a class="nav-link" data-target="welcome" href="#welcome" onclick="showScreen('welcome');return false">Welcome</a><a class="nav-link" data-target="pillars" href="#pillars" onclick="showScreen('pillars');return false">The Foundation</a><a class="nav-link" data-target="how" href="#how" onclick="showScreen('how');return false">How It Works</a><a class="nav-link" data-target="ages" href="#ages" onclick="showScreen('ages');return false">Milestone Map</a><div class="nav-group">The 20 Topics</div><a class="nav-link" data-target="ch1" href="#ch1" onclick="showScreen('ch1');return false"><span class="nav-n">01</span>Transitions</a><a class="nav-link" data-target="ch2" href="#ch2" onclick="showScreen('ch2');return false"><span class="nav-n">02</span>Meltdowns</a><a class="nav-link" data-target="ch3" href="#ch3" onclick="showScreen('ch3');return false"><span class="nav-n">03</span>Defiance</a><a class="nav-link" data-target="ch4" href="#ch4" onclick="showScreen('ch4');return false"><span class="nav-n">04</span>Screen Weaning</a><a class="nav-link" data-target="ch5" href="#ch5" onclick="showScreen('ch5');return false"><span class="nav-n">05</span>Sleep Resistance</a><a class="nav-link" data-target="ch6" href="#ch6" onclick="showScreen('ch6');return false"><span class="nav-n">06</span>Not Listening</a><a class="nav-link" data-target="ch7" href="#ch7" onclick="showScreen('ch7');return false"><span class="nav-n">07</span>Hitting &amp; Biting</a><a class="nav-link" data-target="ch8" href="#ch8" onclick="showScreen('ch8');return false"><span class="nav-n">08</span>Independence-Building</a><a class="nav-link" data-target="ch9" href="#ch9" onclick="showScreen('ch9');return false"><span class="nav-n">09</span>Eating</a><a class="nav-link" data-target="ch10" href="#ch10" onclick="showScreen('ch10');return false"><span class="nav-n">10</span>The "Why" Phase</a><a class="nav-link" data-target="ch11" href="#ch11" onclick="showScreen('ch11');return false"><span class="nav-n">11</span>Separation Anxiety</a><a class="nav-link" data-target="ch12" href="#ch12" onclick="showScreen('ch12');return false"><span class="nav-n">12</span>Sibling Dynamics</a><a class="nav-link" data-target="ch13" href="#ch13" onclick="showScreen('ch13');return false"><span class="nav-n">13</span>Emotional Regulation</a><a class="nav-link" data-target="ch14" href="#ch14" onclick="showScreen('ch14');return false"><span class="nav-n">14</span>Potty Training</a><a class="nav-link" data-target="ch15" href="#ch15" onclick="showScreen('ch15');return false"><span class="nav-n">15</span>Whining</a><a class="nav-link" data-target="ch16" href="#ch16" onclick="showScreen('ch16');return false"><span class="nav-n">16</span>Getting Dressed &amp; Ready</a><a class="nav-link" data-target="ch17" href="#ch17" onclick="showScreen('ch17');return false"><span class="nav-n">17</span>Public Behavior</a><a class="nav-link" data-target="ch18" href="#ch18" onclick="showScreen('ch18');return false"><span class="nav-n">18</span>Language &amp; Speech</a><a class="nav-link" data-target="ch19" href="#ch19" onclick="showScreen('ch19');return false"><span class="nav-n">19</span>Mom Guilt &amp; Consistency</a><a class="nav-link" data-target="ch20" href="#ch20" onclick="showScreen('ch20');return false"><span class="nav-n">20</span>Raising a Confident Kid</a><div class="nav-group">Toolkit</div><a class="nav-link" data-target="printables" href="#printables" onclick="showScreen('printables');return false">Printables</a><a class="nav-link" data-target="workbook" href="#workbook" onclick="showScreen('workbook');return false">Interactive Workbook</a><a class="nav-link" data-target="close" href="#close" onclick="showScreen('close');return false">The Close</a>
 </aside>
 
 <main class="reader">
@@ -716,39 +730,6 @@
   <div class="tags"><span class="tag">script</span><span class="tag">consistency tool</span><span class="tag">what not to do</span><span class="tag">language</span><span class="tag">follow through</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Transitions</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does transitions look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Rhythm Blueprint &#160;/&#160; Formula #2: The Bridge Language Install</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch2">
 <div class="screen-inner">
@@ -819,39 +800,6 @@
   <div class="tags"><span class="tag">parent-first-script</span><span class="tag">patience-reset</span><span class="tag">au-pair-insight</span><span class="tag">co-regulation</span><span class="tag">modeling</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Meltdowns</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does meltdowns look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Structure Audit &#160;/&#160; Formula #2: The Regulated Parent Response</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch3">
 <div class="screen-inner">
@@ -917,39 +865,6 @@
   <div class="tags"><span class="tag">structure-blueprint</span><span class="tag">patience-reset</span><span class="tag">parent-behavior</span><span class="tag">rebuild</span><span class="tag">entrenched-defiance</span><span class="tag">5-day-reset</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Defiance</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does defiance look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Non-Negotiable Line &#160;/&#160; Formula #2: The Rebuild Sequence</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch4">
 <div class="screen-inner">
@@ -1017,39 +932,6 @@
   <div class="tags"><span class="tag">screen-weaning</span><span class="tag">consistency</span><span class="tag">boundaries</span><span class="tag">hold-the-structure</span><span class="tag">script</span><span class="tag">first-ten-days</span><span class="tag">toddler</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Screen Weaning</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does screen weaning look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Replacement Architecture &#160;/&#160; Formula #2: The Consistent Rule That Holds</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch5">
 <div class="screen-inner">
@@ -1128,39 +1010,6 @@
   <div class="tags"><span class="tag">Consistency tool</span><span class="tag">Parent behavior</span><span class="tag">Parent expertise</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Sleep Resistance</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does sleep resistance look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Bedtime Architecture &#160;/&#160; Formula #2: The Parent Consistency Test</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch6">
 <div class="screen-inner">
@@ -1222,39 +1071,6 @@
   <div class="tags"><span class="tag">structure-blueprint</span><span class="tag">50-50-window</span><span class="tag">parent-expertise</span><span class="tag">10-day-progression</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Not Listening</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does not listening look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Word Economy Rule &#160;/&#160; Formula #2: The Reliability Build</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch7">
 <div class="screen-inner">
@@ -1324,39 +1140,6 @@
   <div class="tags"><span class="tag">script</span><span class="tag">consistency</span><span class="tag">replacement-behavior</span><span class="tag">co-regulation</span><span class="tag">boundaries</span><span class="tag">repetition</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Hitting & Biting</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does hitting & biting look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Prevention Architecture &#160;/&#160; Formula #2: The Boundary-With-Warmth Script</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch8">
 <div class="screen-inner">
@@ -1425,39 +1208,6 @@
   <div class="tags"><span class="tag">Printable</span><span class="tag">Early entry</span><span class="tag">Consistency tool</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Independence-Building</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does independence-building look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Designed Struggle &#160;/&#160; Formula #2: The Contribution Ladder</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch9">
 <div class="screen-inner">
@@ -1532,39 +1282,6 @@
   <div class="tags"><span class="tag">restaurants</span><span class="tag">public-eating</span><span class="tag">pre-load</span><span class="tag">briefing</span><span class="tag">18-months</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Eating</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does eating look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Table Structure &#160;/&#160; Formula #2: The Restaurant Pre-Load</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch10">
 <div class="screen-inner">
@@ -1628,39 +1345,6 @@
   <div class="tags"><span class="tag">script</span><span class="tag">early-entry</span><span class="tag">parent-expertise</span><span class="tag">intellectual-independence</span><span class="tag">reasoning</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: The "Why" Phase</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does the "why" phase look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Engagement Standard &#160;/&#160; Formula #2: The Flip and Build</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch11">
 <div class="screen-inner">
@@ -1732,39 +1416,6 @@
   <div class="tags"><span class="tag">Parent-first script</span><span class="tag">Parent behavior</span><span class="tag">Discomfort holds</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Separation Anxiety</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does separation anxiety look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Predictability Investment &#160;/&#160; Formula #2: The Confident Exit</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch12">
 <div class="screen-inner">
@@ -1828,39 +1479,6 @@
   <div class="tags"><span class="tag">sibling-dynamics</span><span class="tag">sibling-conflict</span><span class="tag">one-on-one-time</span><span class="tag">shared-space-rules</span><span class="tag">dispute-sequence</span><span class="tag">consistency</span><span class="tag">hold-the-structure</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Sibling Dynamics</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does sibling dynamics look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Role Assignment &#160;/&#160; Formula #2: The Sibling Structure Hold</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch13">
 <div class="screen-inner">
@@ -1925,39 +1543,6 @@
   <div class="tags"><span class="tag">Environment design</span><span class="tag">50/50 window</span><span class="tag">Parent expertise</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Emotional Regulation</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does emotional regulation look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Daily Feelings Practice &#160;/&#160; Formula #2: The Calm Space as Infrastructure</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch14">
 <div class="screen-inner">
@@ -2024,39 +1609,6 @@
   <div class="tags"><span class="tag">Patience reset</span><span class="tag">Parent behavior</span><span class="tag">Parent expertise</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Potty Training</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does potty training look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Consistency Blueprint &#160;/&#160; Formula #2: The Patience Reset</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch15">
 <div class="screen-inner">
@@ -2122,39 +1674,6 @@
   <div class="tags"><span class="tag">structure-blueprint</span><span class="tag">environment-design</span><span class="tag">parent-expertise</span><span class="tag">connection</span><span class="tag">prevention</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Whining</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does whining look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Consistent Non-Response &#160;/&#160; Formula #2: The Connection Pre-Fill</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch16">
 <div class="screen-inner">
@@ -2224,39 +1743,6 @@
   <div class="tags"><span class="tag">parent-first-script</span><span class="tag">consistency-tool</span><span class="tag">parent-expertise</span><span class="tag">resistance</span><span class="tag">dressing</span><span class="tag">engagement</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Getting Dressed & Ready</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does getting dressed & ready look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Evening Foundation &#160;/&#160; Formula #2: The Engagement Method</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch17">
 <div class="screen-inner">
@@ -2324,39 +1810,6 @@
   <div class="tags"><span class="tag">parent-behavior</span><span class="tag">script</span><span class="tag">parent-expertise</span><span class="tag">consistency</span><span class="tag">public</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Public Behavior</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does public behavior look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Pre-Load Protocol &#160;/&#160; Formula #2: The Calm Exit Standard</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch18">
 <div class="screen-inner">
@@ -2426,39 +1879,6 @@
   <div class="tags"><span class="tag">milestones</span><span class="tag">speech-development</span><span class="tag">12mo</span><span class="tag">18mo</span><span class="tag">24mo</span><span class="tag">3yr</span><span class="tag">early-support</span><span class="tag">printable</span><span class="tag">foundation-audit</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Language & Speech</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does language & speech look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Language Environment &#160;/&#160; Formula #2: The Milestone Structure</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch19">
 <div class="screen-inner">
@@ -2524,39 +1944,6 @@
   <div class="tags"><span class="tag">repair</span><span class="tag">parent-first-script</span><span class="tag">patience-reset</span><span class="tag">discomfort-holds</span><span class="tag">self-compassion</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Mom Guilt & Consistency</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does mom guilt & consistency look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Consistency Standard &#160;/&#160; Formula #2: The Repair Formula</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="ch20">
 <div class="screen-inner">
@@ -2621,39 +2008,6 @@
   <div class="tags"><span class="tag">confidence</span><span class="tag">foundation-before-freedom</span><span class="tag">close</span><span class="tag">resilience</span><span class="tag">independence</span><span class="tag">audit</span><span class="tag">discomfort</span><span class="tag">you-go-first</span></div>
 </div>
 
-<div class="workbook">
-  <h3>&#9998; Your Workbook: Raising a Confident Kid</h3>
-  <p class="wb-intro">Print this page and fill it in. This is where the reading becomes your plan. Pick one thing, write it down, and hold it.</p>
-  <div class="wb-prompt">1. What does raising a confident kid look like in your house right now? Name the hardest moment.</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Capability Language Standard &#160;/&#160; Formula #2: Foundation Before Freedom, The Close</div>
-  <div class="wb-lines"></div>
-  <div class="wb-row">
-    <div>
-      <div class="wb-prompt">3. The ONE structure I will hold:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-    <div>
-      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
-      <div class="wb-lines"></div><div class="wb-lines"></div>
-    </div>
-  </div>
-  <div class="wb-prompt">5. What "going first" looks like for me here (my calm, my consistency, my follow-through):</div>
-  <div class="wb-lines"></div><div class="wb-lines"></div>
-  <table style="width:100%;border-collapse:collapse;margin-top:14px">
-    <tr><td class="pr-l" style="width:34%">Week 1 &#8212; what I noticed</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 2 &#8212; what shifted</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-    <tr><td class="pr-l">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r"><div class="wb-lines" style="height:24px"></div></td></tr>
-  </table>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
-</div>
-<div class="sticker">
-  <h4>&#9733; Sticker Chart: earn it together</h4>
-  <p class="sk-intro">For toddlers around 2 and up who can take part. Add one sticker each day they join in. Ten stickers earns one small, age-appropriate reward &#8212; find the full list in <strong>Rewards by Age</strong> at the back of this ebook.</p>
-  <div class="sk-grid"><div class="sk-cell">1</div><div class="sk-cell">2</div><div class="sk-cell">3</div><div class="sk-cell">4</div><div class="sk-cell">5</div><div class="sk-cell">6</div><div class="sk-cell">7</div><div class="sk-cell">8</div><div class="sk-cell">9</div><div class="sk-cell">10</div></div>
-  <p style="font-size:13px;color:var(--ink);margin-top:12px">Reward at 10 stickers: <span style="border-bottom:1.5px solid var(--line);display:inline-block;min-width:200px">&#160;</span></p>
-  <button class="print-btn" onclick="window.print()">&#128424; Print this sticker chart</button>
-</div>
 </div></section>
 <section class="screen " id="printables">
 <div class="screen-inner">
@@ -2714,6 +2068,553 @@
     <button class="print-btn" onclick="window.print()">&#128424; Print rewards list</button>
   </section>
 </div></section>
+<section class="screen " id="workbook">
+<div class="screen-inner">
+  <div class="section-mark">The Toolkit</div>
+  <h1 class="lead-h">Interactive Workbook</h1>
+  <p style="font-size:15px;color:var(--muted);margin:0 auto 32px;max-width:560px;text-align:center">One page per topic. Fill each in as you work through the ebook: type directly on screen, or print and write by hand.</p>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">01</span><span class="wb-title">Transitions</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does transitions look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Rhythm Blueprint &#160;/&#160; Formula #2: The Bridge Language Install</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">02</span><span class="wb-title">Meltdowns</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does meltdowns look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Structure Audit &#160;/&#160; Formula #2: The Regulated Parent Response</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">03</span><span class="wb-title">Defiance</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does defiance look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Non-Negotiable Line &#160;/&#160; Formula #2: The Rebuild Sequence</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">04</span><span class="wb-title">Screen Weaning</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does screen weaning look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Replacement Architecture &#160;/&#160; Formula #2: The Consistent Rule That Holds</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">05</span><span class="wb-title">Sleep Resistance</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does sleep resistance look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Bedtime Architecture &#160;/&#160; Formula #2: The Parent Consistency Test</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">06</span><span class="wb-title">Not Listening</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does not listening look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Word Economy Rule &#160;/&#160; Formula #2: The Reliability Build</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">07</span><span class="wb-title">Hitting &amp; Biting</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does hitting &amp; biting look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Prevention Architecture &#160;/&#160; Formula #2: The Boundary-With-Warmth Script</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">08</span><span class="wb-title">Independence-Building</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does independence-building look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Designed Struggle &#160;/&#160; Formula #2: The Contribution Ladder</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">09</span><span class="wb-title">Eating</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does eating look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Table Structure &#160;/&#160; Formula #2: The Restaurant Pre-Load</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">10</span><span class="wb-title">The &#8220;Why&#8221; Phase</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does the &#8220;why&#8221; phase look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Engagement Standard &#160;/&#160; Formula #2: The Flip and Build</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">11</span><span class="wb-title">Separation Anxiety</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does separation anxiety look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Predictability Investment &#160;/&#160; Formula #2: The Confident Exit</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">12</span><span class="wb-title">Sibling Dynamics</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does sibling dynamics look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Role Assignment &#160;/&#160; Formula #2: The Sibling Structure Hold</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">13</span><span class="wb-title">Emotional Regulation</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does emotional regulation look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Daily Feelings Practice &#160;/&#160; Formula #2: The Calm Space as Infrastructure</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">14</span><span class="wb-title">Potty Training</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does potty training look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Consistency Blueprint &#160;/&#160; Formula #2: The Patience Reset</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">15</span><span class="wb-title">Whining</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does whining look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Consistent Non-Response &#160;/&#160; Formula #2: The Connection Pre-Fill</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">16</span><span class="wb-title">Getting Dressed &amp; Ready</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does getting dressed &amp; ready look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Evening Foundation &#160;/&#160; Formula #2: The Engagement Method</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">17</span><span class="wb-title">Public Behavior</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does public behavior look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Pre-Load Protocol &#160;/&#160; Formula #2: The Calm Exit Standard</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">18</span><span class="wb-title">Language &amp; Speech</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does language &amp; speech look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Language Environment &#160;/&#160; Formula #2: The Milestone Structure</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">19</span><span class="wb-title">Mom Guilt &amp; Consistency</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does mom guilt &amp; consistency look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Consistency Standard &#160;/&#160; Formula #2: The Repair Formula</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+<div class="workbook wb-page">
+  <div class="wb-topic-head"><span class="wb-num">20</span><span class="wb-title">Raising a Confident Kid</span></div>
+  <p class="wb-intro">Fill this in as you work through the chapter. Type directly on screen, or print and write by hand.</p>
+  <div class="wb-prompt">1. What does raising a confident kid look like in your house right now? Name the hardest moment.</div>
+  <textarea class="wb-field" rows="3" placeholder="Write here..."></textarea>
+  <div class="wb-prompt">2. Which formula are you starting with? Circle one &#8212; Formula #1: The Capability Language Standard &#160;/&#160; Formula #2: Foundation Before Freedom, The Close</div>
+  <textarea class="wb-field" rows="1" placeholder="Note your choice and any first thoughts..."></textarea>
+  <div class="wb-row">
+    <div>
+      <div class="wb-prompt">3. The ONE structure I will hold:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+    <div>
+      <div class="wb-prompt">4. My start date &amp; my hardest moment of the day to hold it:</div>
+      <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+    </div>
+  </div>
+  <div class="wb-prompt">5. What &#8220;going first&#8221; looks like for me here (my calm, my consistency, my follow-through):</div>
+  <textarea class="wb-field" rows="2" placeholder="Write here..."></textarea>
+  <table style="width:100%;border-collapse:collapse;margin-top:16px">
+    <tr><td class="pr-l" style="width:34%;padding:8px 14px 8px 0">Week 1 &#8212; what I noticed</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 2 &#8212; what shifted</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+    <tr><td class="pr-l" style="padding:8px 14px 8px 0">Week 3 &#8212; the wall &amp; the breakthrough</td><td class="pr-r" style="padding:8px 0"><textarea class="wb-field" rows="1" placeholder="..."></textarea></td></tr>
+  </table>
+  <button class="print-btn" onclick="window.print()">&#128424; Print this workbook page</button>
+</div>
+
+</div></section>
 <section class="screen " id="close">
 <div class="screen-inner">
   <div class="closer">
@@ -2731,7 +2632,7 @@
 </div>
 
 <script>
-const ORDER = ["cover","welcome","ages","pillars","how","ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8","ch9","ch10","ch11","ch12","ch13","ch14","ch15","ch16","ch17","ch18","ch19","ch20","printables","close"];
+const ORDER = ["cover","welcome","ages","pillars","how","ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8","ch9","ch10","ch11","ch12","ch13","ch14","ch15","ch16","ch17","ch18","ch19","ch20","printables","workbook","close"];
 function currentId(){ const a=document.querySelector('.screen.active'); return a?a.id:ORDER[0]; }
 function navLabel(id){ const l=document.querySelector('.nav-link[data-target="'+id+'"]'); return l?l.textContent.trim():'The Capable Toddler'; }
 function showScreen(id){
