@@ -174,6 +174,37 @@
     body{font-size:12px;background:#fff}
     a{color:inherit;text-decoration:none}
   }
+/* QUICK REFERENCE */
+.qr-intro{font-size:15px;color:var(--muted);text-align:center;margin:0 auto 28px;max-width:580px;line-height:1.65}
+.domain-legend{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
+.dl-pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.05em;padding:6px 14px;border-radius:99px;border:1.5px solid;background:#fff}
+.dl-dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.age-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
+.age-tab{font-family:'Fraunces',serif;font-weight:700;font-size:15px;padding:10px 22px;border-radius:99px;border:2px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:all .18s}
+.age-tab:hover{border-color:var(--clay);color:var(--clay)}
+.age-tab.qr-active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.age-panel{display:none}
+.age-panel.qr-visible{display:block}
+.age-badge{font-family:'Fraunces',serif;font-weight:900;font-size:28px;margin-bottom:4px}
+.age-summary{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.65;max-width:620px}
+.domain-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.domain-card{background:#fff;border-radius:14px;border:1px solid var(--line);padding:18px 18px 12px;border-top-width:4px;border-top-style:solid}
+.domain-label{font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.milestone-list{list-style:none;padding:0;margin:0}
+.milestone-list li{font-size:13px;color:var(--ink);line-height:1.6;padding:5px 0 5px 20px;position:relative;border-bottom:1px solid rgba(0,0,0,.05)}
+.milestone-list li:last-child{border-bottom:none}
+.milestone-list li::before{content:'';position:absolute;left:5px;top:12px;width:6px;height:6px;border-radius:50%}
+.chapter-nav{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:8px}
+.chapter-nav-label{font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.chapter-chips{display:flex;flex-wrap:wrap;gap:7px}
+.chapter-chip{font-size:12px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 14px;cursor:pointer;color:var(--ink);transition:all .15s;white-space:nowrap;font-family:'Inter',sans-serif}
+.chapter-chip:hover{background:var(--clay);color:#fff;border-color:var(--clay)}
+.qr-cdc-note{font-size:11px;color:var(--muted);text-align:center;margin:16px 0 24px;line-height:1.5}
+@media(max-width:680px){
+  .domain-grid{grid-template-columns:1fr}
+  .age-tabs{gap:6px}
+  .age-tab{font-size:13px;padding:8px 16px}
+}
 </style>
 </head>
 <body>
@@ -231,175 +262,339 @@
 <div class="screen-inner">
   <div class="section-mark">Quick Reference</div>
   <h1 class="lead-h">Ages 12 Months–4 Years</h1>
-  <p style="font-size:16px;color:var(--muted);text-align:center;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto">This ebook is built for toddlers 12 months through 4 years. Come back to this page any time to see exactly where your child is developmentally — and what they are genuinely ready for right now.</p>
+  <p class="qr-intro">Find your child's age, see where they are across all four areas of development, and go straight to the chapters that matter most right now. Come back to this page whenever you need a reset. This is your map.</p>
 
-  <!-- MILESTONE TIMELINE SVG -->
-  <figure class="visual">
-  <svg class="concept-svg" viewBox="0 0 680 340" role="img" aria-label="Developmental milestones 12 months through 4 years">
-    <!-- Timeline spine -->
-    <line x1="40" y1="170" x2="648" y2="170" stroke="#E3D8C8" stroke-width="3"/>
-    <!-- Age dots & labels -->
-    <!-- 12 months -->
-    <circle cx="80" cy="170" r="18" fill="#B85C38"/>
-    <text x="80" y="175" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="11" fill="#fff">12m</text>
-    <!-- 18 months -->
-    <circle cx="232" cy="170" r="18" fill="#B85C38"/>
-    <text x="232" y="175" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="11" fill="#fff">18m</text>
-    <!-- 2 years -->
-    <circle cx="384" cy="170" r="18" fill="#7A8B6F"/>
-    <text x="384" y="175" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="11" fill="#fff">2yr</text>
-    <!-- 3 years -->
-    <circle cx="528" cy="170" r="18" fill="#7A8B6F"/>
-    <text x="528" y="175" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="11" fill="#fff">3yr</text>
-    <!-- 4 years -->
-    <circle cx="640" cy="170" r="18" fill="#1F1A14"/>
-    <text x="640" y="175" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="11" fill="#fff">4yr</text>
-    <!-- ABOVE LINE: Language -->
-    <text x="80" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B85C38" font-weight="700">LANGUAGE</text>
-    <text x="80" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">1–2 words</text>
-    <text x="80" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">waves, points</text>
-    <line x1="80" y1="152" x2="80" y2="104" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="232" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B85C38" font-weight="700">LANGUAGE</text>
-    <text x="232" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">10–25 words</text>
-    <text x="232" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">names objects</text>
-    <line x1="232" y1="152" x2="232" y2="104" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="384" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7A8B6F" font-weight="700">LANGUAGE</text>
-    <text x="384" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">2-word phrases</text>
-    <text x="384" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">200+ words</text>
-    <line x1="384" y1="152" x2="384" y2="104" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="528" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7A8B6F" font-weight="700">LANGUAGE</text>
-    <text x="528" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">short sentences</text>
-    <text x="528" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">asks "why"</text>
-    <line x1="528" y1="152" x2="528" y2="104" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="640" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#1F1A14" font-weight="700">LANGUAGE</text>
-    <text x="640" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">full sentences</text>
-    <text x="640" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">tells stories</text>
-    <line x1="640" y1="152" x2="640" y2="104" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <!-- BELOW LINE: Social/Motor -->
-    <line x1="80" y1="188" x2="80" y2="228" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="80" y="242" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B85C38" font-weight="700">SOCIAL</text>
-    <text x="80" y="256" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">sep. anxiety</text>
-    <text x="80" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">parallel play</text>
-    <text x="80" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">1-step directions</text>
-    <line x1="232" y1="188" x2="232" y2="228" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="232" y="242" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B85C38" font-weight="700">SOCIAL</text>
-    <text x="232" y="256" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">autonomy drive</text>
-    <text x="232" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">strong "no"</text>
-    <text x="232" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">2-step chores</text>
-    <line x1="384" y1="188" x2="384" y2="228" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="384" y="242" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7A8B6F" font-weight="700">SOCIAL</text>
-    <text x="384" y="256" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">limit-testing</text>
-    <text x="384" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">cause-effect</text>
-    <text x="384" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">dresses w/help</text>
-    <line x1="528" y1="188" x2="528" y2="228" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="528" y="242" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7A8B6F" font-weight="700">SOCIAL</text>
-    <text x="528" y="256" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">takes turns</text>
-    <text x="528" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">imaginative play</text>
-    <text x="528" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">clears own plate</text>
-    <line x1="640" y1="188" x2="640" y2="228" stroke="#E3D8C8" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="640" y="242" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#1F1A14" font-weight="700">SOCIAL</text>
-    <text x="640" y="256" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">cooperative play</text>
-    <text x="640" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">understands rules</text>
-    <text x="640" y="282" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#6b6253">owns daily job</text>
-  </svg>
-  <figcaption>Each dot on the timeline is a developmental window. The moment that window opens, this ebook shows you how to walk through it.</figcaption>
-  </figure>
-
-  <!-- DETAILED CARDS BY AGE -->
-  <h2 style="font-family:'Fraunces',serif;font-size:24px;margin:36px 0 20px;font-weight:900">What your child can actually do at each stage</h2>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
-
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
-      <div style="font-family:'Fraunces',serif;font-weight:900;font-size:22px;color:#B85C38;margin-bottom:12px">12 Months</div>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Brain</div>
-      <p style="font-size:13px;color:var(--ink);margin-bottom:10px">Object permanence is set. Can learn and anticipate sequences. Emotional contagion is strong — they read your face constantly.</p>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">What they can do</div>
-      <ul style="font-size:13px;color:var(--ink);padding-left:16px;margin-bottom:10px;line-height:1.7">
-        <li>Follow one-step directions</li>
-        <li>Stack two blocks</li>
-        <li>Put objects in a container</li>
-        <li>Drop a sock in a hamper (first chore)</li>
-        <li>Wave bye-bye, point to things</li>
-      </ul>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Best activities</div>
-      <p style="font-size:13px;color:var(--muted)">Stacking cups, board books, simple music, sensory bins, parallel play with a caregiver on the floor</p>
-    </div>
-
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
-      <div style="font-family:'Fraunces',serif;font-weight:900;font-size:22px;color:#B85C38;margin-bottom:12px">18 Months</div>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Brain</div>
-      <p style="font-size:13px;color:var(--ink);margin-bottom:10px">Autonomy drive comes online. Strong preferences forming. The "no" is biological, not personal. The window for limits is wide open right now.</p>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">What they can do</div>
-      <ul style="font-size:13px;color:var(--ink);padding-left:16px;margin-bottom:10px;line-height:1.7">
-        <li>Follow two-step directions</li>
-        <li>Run and climb stairs with help</li>
-        <li>Do 2–3 simple chores</li>
-        <li>Name things by pointing</li>
-        <li>Use 10–25 words with meaning</li>
-      </ul>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Best activities</div>
-      <p style="font-size:13px;color:var(--muted)">Simple sorting, outdoor exploration, pretend play, 4–6 piece puzzles, helping carry things</p>
-    </div>
-
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
-      <div style="font-family:'Fraunces',serif;font-weight:900;font-size:22px;color:#7A8B6F;margin-bottom:12px">2 Years</div>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Brain</div>
-      <p style="font-size:13px;color:var(--ink);margin-bottom:10px">Language explosion. Cause-and-effect reasoning starting. Limit-testing is at peak. The potty training window is open. Defiance is normal and healthy.</p>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">What they can do</div>
-      <ul style="font-size:13px;color:var(--ink);padding-left:16px;margin-bottom:10px;line-height:1.7">
-        <li>2-word combinations ("more milk")</li>
-        <li>Dress with help</li>
-        <li>Pour water, carry plate to counter</li>
-        <li>Kick a ball, draw lines</li>
-        <li>Use a spoon independently</li>
-      </ul>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Best activities</div>
-      <p style="font-size:13px;color:var(--muted)">Playdough, coloring, simple building, water play, dramatic play, household helping tasks</p>
-    </div>
-
-    <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px">
-      <div style="font-family:'Fraunces',serif;font-weight:900;font-size:22px;color:#7A8B6F;margin-bottom:12px">3 Years</div>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Brain</div>
-      <p style="font-size:13px;color:var(--ink);margin-bottom:10px">Causal reasoning firing ("why" phase is here). Imagination active. Beginning to understand turns and fairness. Can hold a 3-step sequence.</p>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">What they can do</div>
-      <ul style="font-size:13px;color:var(--ink);padding-left:16px;margin-bottom:10px;line-height:1.7">
-        <li>Short sentences (strangers understand)</li>
-        <li>Dress mostly independently</li>
-        <li>Clear their plate, feed a pet</li>
-        <li>Pedal a tricycle</li>
-        <li>Draw a circle, 12-piece puzzles</li>
-      </ul>
-      <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Best activities</div>
-      <p style="font-size:13px;color:var(--muted)">Drawing, construction play, pretend cooking, simple board games with rules, reading chapter books aloud</p>
-    </div>
-
+  <div class="domain-legend">
+    <span class="dl-pill" style="color:#B85C38;border-color:#B85C38"><span class="dl-dot" style="background:#B85C38"></span>Social / Emotional</span>
+    <span class="dl-pill" style="color:#7A8B6F;border-color:#7A8B6F"><span class="dl-dot" style="background:#7A8B6F"></span>Language / Communication</span>
+    <span class="dl-pill" style="color:#C49A3C;border-color:#C49A3C"><span class="dl-dot" style="background:#C49A3C"></span>Cognitive</span>
+    <span class="dl-pill" style="color:#4A7B9A;border-color:#4A7B9A"><span class="dl-dot" style="background:#4A7B9A"></span>Movement / Physical</span>
   </div>
 
-  <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:32px">
-    <div style="font-family:'Fraunces',serif;font-weight:900;font-size:22px;color:#1F1A14;margin-bottom:12px">4 Years</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Brain</div>
-        <p style="font-size:13px;color:var(--ink);margin-bottom:10px">Logical thinking developing. Plans ahead, negotiates, understands fairness and rules deeply. Cooperative play begins in earnest. Stories become complex.</p>
-        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">What they can do</div>
-        <ul style="font-size:13px;color:var(--ink);padding-left:16px;line-height:1.7">
-          <li>Full sentences and storytelling</li>
-          <li>Full independence in dressing</li>
-          <li>Own a daily family job</li>
-          <li>Hop, skip, catch a ball</li>
-          <li>Use scissors, write some letters</li>
+  <div class="age-tabs">
+    <button class="age-tab qr-active" onclick="showAge('12m',this)">12 Months</button>
+    <button class="age-tab" onclick="showAge('18m',this)">18 Months</button>
+    <button class="age-tab" onclick="showAge('2yr',this)">2 Years</button>
+    <button class="age-tab" onclick="showAge('3yr',this)">3 Years</button>
+    <button class="age-tab" onclick="showAge('4yr',this)">4 Years</button>
+  </div>
+
+  <!-- 12 MONTHS -->
+  <div class="age-panel qr-visible" id="age-12m">
+    <div class="age-badge" style="color:#B85C38">12 Months</div>
+    <p class="age-summary">Object permanence is set. Your child reads your face constantly and can learn sequences. The window for first limits, first chores, and a consistent sleep structure is open right now.</p>
+    <div class="domain-grid">
+      <div class="domain-card" style="border-top-color:#B85C38">
+        <div class="domain-label" style="color:#B85C38">Social / Emotional</div>
+        <ul class="milestone-list">
+          <li style="--bc:#B85C38">Plays peek-a-boo and pat-a-cake</li>
+          <li>Waves bye-bye, puts arms out to be held</li>
+          <li>Shows preference for familiar people and toys</li>
+          <li>Shows fear or shyness around strangers</li>
+          <li>Cries or clings when caregiver leaves</li>
+          <li>Offers objects to others and lets go</li>
         </ul>
       </div>
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7A8B6F;margin-bottom:6px">Best activities</div>
-        <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Board games, art projects, helping with meal prep, reading together, building elaborate structures, writing and drawing their own stories</p>
-        <div style="background:var(--clay-soft);border:1px solid rgba(184,92,56,.2);border-radius:10px;padding:12px">
-          <p style="font-size:13px;color:var(--ink);margin:0"><strong style="color:var(--clay)">Foundation Before Freedom in action:</strong> A 4-year-old who grew up inside consistent structure does not fight independence. They walk toward it — because capable is the only thing they have ever known how to be.</p>
-        </div>
+      <div class="domain-card" style="border-top-color:#7A8B6F">
+        <div class="domain-label" style="color:#7A8B6F">Language / Communication</div>
+        <ul class="milestone-list">
+          <li>Says "mama" and "dada" with meaning</li>
+          <li>Says at least 1 word besides mama / dada</li>
+          <li>Shakes head "no"</li>
+          <li>Points to get attention or ask for something</li>
+          <li>Understands simple one-step requests</li>
+          <li>Imitates sounds and simple words you say</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#C49A3C">
+        <div class="domain-label" style="color:#C49A3C">Cognitive</div>
+        <ul class="milestone-list">
+          <li>Looks for hidden objects (object permanence is set)</li>
+          <li>Bangs two objects together deliberately</li>
+          <li>Puts objects into a container and takes them out</li>
+          <li>Pokes with index finger to explore</li>
+          <li>Uses things correctly: drinks from cup, combs hair</li>
+          <li>Imitates simple actions (patting a doll)</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#4A7B9A">
+        <div class="domain-label" style="color:#4A7B9A">Movement / Physical</div>
+        <ul class="milestone-list">
+          <li>Pulls to stand and cruises along furniture</li>
+          <li>May take first independent steps</li>
+          <li>Picks up small objects with pincer grasp</li>
+          <li>Drops a sock in a hamper (first real chore)</li>
+          <li>Drinks from a cup with help</li>
+          <li>Feeds self finger foods independently</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chapter-nav">
+      <div class="chapter-nav-label">Chapters most relevant right now</div>
+      <div class="chapter-chips">
+        <span class="chapter-chip" onclick="showScreen('ch5')">05 · Sleep Resistance</span>
+        <span class="chapter-chip" onclick="showScreen('ch11')">11 · Separation Anxiety</span>
+        <span class="chapter-chip" onclick="showScreen('ch13')">13 · Emotional Regulation</span>
+        <span class="chapter-chip" onclick="showScreen('ch6')">06 · Not Listening</span>
+        <span class="chapter-chip" onclick="showScreen('ch8')">08 · Independence-Building</span>
+        <span class="chapter-chip" onclick="showScreen('ch9')">09 · Eating</span>
       </div>
     </div>
   </div>
+
+  <!-- 18 MONTHS -->
+  <div class="age-panel" id="age-18m">
+    <div class="age-badge" style="color:#B85C38">18 Months</div>
+    <p class="age-summary">The autonomy drive is online. The "no" is biological, not personal. This is the single most important window to install consistent limits, because the child who learns limits hold at 18 months tests them briefly at 3.</p>
+    <div class="domain-grid">
+      <div class="domain-card" style="border-top-color:#B85C38">
+        <div class="domain-label" style="color:#B85C38">Social / Emotional</div>
+        <ul class="milestone-list">
+          <li>Moves away from caregiver but checks back</li>
+          <li>Points to share exciting things with you</li>
+          <li>Claps when excited, hugs stuffed animals</li>
+          <li>Notices when others are hurt or sad</li>
+          <li>Shows strong preferences and strong "no"</li>
+          <li>Plays alongside others, not yet with them</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#7A8B6F">
+        <div class="domain-label" style="color:#7A8B6F">Language / Communication</div>
+        <ul class="milestone-list">
+          <li>Uses 10+ words with meaning</li>
+          <li>Tries to say 3+ words besides mama / dada</li>
+          <li>Follows 1-step directions without gestures</li>
+          <li>Points to ask for something or get help</li>
+          <li>Names familiar objects when asked</li>
+          <li>Says "mine" and "no" frequently</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#C49A3C">
+        <div class="domain-label" style="color:#C49A3C">Cognitive</div>
+        <ul class="milestone-list">
+          <li>Knows what ordinary things are for (cup, phone, spoon)</li>
+          <li>Points to 1-2 body parts when asked</li>
+          <li>Plays with toys in simple ways (pushes toy car)</li>
+          <li>Tries to use switches, knobs, buttons</li>
+          <li>Scribbles with crayon</li>
+          <li>Begins simple pretend play (feeding a doll)</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#4A7B9A">
+        <div class="domain-label" style="color:#4A7B9A">Movement / Physical</div>
+        <ul class="milestone-list">
+          <li>Walks without holding on</li>
+          <li>May walk up steps and run (still falls)</li>
+          <li>Drinks from a cup without a lid</li>
+          <li>Eats with a spoon (messy is normal)</li>
+          <li>Can do 2-3 simple chores with direction</li>
+          <li>Stacks 3-4 blocks</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chapter-nav">
+      <div class="chapter-nav-label">Chapters most relevant right now</div>
+      <div class="chapter-chips">
+        <span class="chapter-chip" onclick="showScreen('ch3')">03 · Defiance</span>
+        <span class="chapter-chip" onclick="showScreen('ch7')">07 · Hitting &amp; Biting</span>
+        <span class="chapter-chip" onclick="showScreen('ch11')">11 · Separation Anxiety</span>
+        <span class="chapter-chip" onclick="showScreen('ch8')">08 · Independence-Building</span>
+        <span class="chapter-chip" onclick="showScreen('ch6')">06 · Not Listening</span>
+        <span class="chapter-chip" onclick="showScreen('ch1')">01 · Transitions</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 YEARS -->
+  <div class="age-panel" id="age-2yr">
+    <div class="age-badge" style="color:#7A8B6F">2 Years</div>
+    <p class="age-summary">Language is exploding. Cause-and-effect reasoning is starting. Limit-testing is at its peak. The potty training window is open. Defiance at this age is normal and healthy, and it responds to structure.</p>
+    <div class="domain-grid">
+      <div class="domain-card" style="border-top-color:#B85C38">
+        <div class="domain-label" style="color:#B85C38">Social / Emotional</div>
+        <ul class="milestone-list">
+          <li>Notices other kids and tries to join them</li>
+          <li>Plays alongside others (parallel play, not yet cooperative)</li>
+          <li>Looks at your face to see how to react in new situations</li>
+          <li>Shows strong defiance: "No!" and "Mine!"</li>
+          <li>Follows simple routines when reminded</li>
+          <li>Begins to show empathy (pats upset child)</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#7A8B6F">
+        <div class="domain-label" style="color:#7A8B6F">Language / Communication</div>
+        <ul class="milestone-list">
+          <li>Uses 50+ words</li>
+          <li>Says 2-word phrases ("more water," "daddy go")</li>
+          <li>Uses more words than gestures now</li>
+          <li>Names familiar people they see often</li>
+          <li>Points to things in books when you name them</li>
+          <li>Says words like "more," "all gone," "uh oh"</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#C49A3C">
+        <div class="domain-label" style="color:#C49A3C">Cognitive</div>
+        <ul class="milestone-list">
+          <li>Follows 2-step directions ("pick it up and bring it to me")</li>
+          <li>Holds something in one hand while doing something with the other</li>
+          <li>Sorts objects by shape or color</li>
+          <li>Completes familiar sentences in books</li>
+          <li>Names things in pictures</li>
+          <li>Begins to understand cause and effect</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#4A7B9A">
+        <div class="domain-label" style="color:#4A7B9A">Movement / Physical</div>
+        <ul class="milestone-list">
+          <li>Runs</li>
+          <li>Kicks a ball</li>
+          <li>Walks up a few stairs with or without railing</li>
+          <li>Jumps off ground with both feet</li>
+          <li>Eats with a spoon fairly well</li>
+          <li>Drinks from an open cup</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chapter-nav">
+      <div class="chapter-nav-label">Chapters most relevant right now</div>
+      <div class="chapter-chips">
+        <span class="chapter-chip" onclick="showScreen('ch2')">02 · Meltdowns</span>
+        <span class="chapter-chip" onclick="showScreen('ch3')">03 · Defiance</span>
+        <span class="chapter-chip" onclick="showScreen('ch14')">14 · Potty Training</span>
+        <span class="chapter-chip" onclick="showScreen('ch18')">18 · Language &amp; Speech</span>
+        <span class="chapter-chip" onclick="showScreen('ch9')">09 · Eating</span>
+        <span class="chapter-chip" onclick="showScreen('ch1')">01 · Transitions</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 YEARS -->
+  <div class="age-panel" id="age-3yr">
+    <div class="age-badge" style="color:#7A8B6F">3 Years</div>
+    <p class="age-summary">Causal reasoning is firing and the "why" phase has arrived. Imagination is active. Your child can hold a 3-step sequence and is beginning to understand fairness. This is the window for responsibility and rules.</p>
+    <div class="domain-grid">
+      <div class="domain-card" style="border-top-color:#B85C38">
+        <div class="domain-label" style="color:#B85C38">Social / Emotional</div>
+        <ul class="milestone-list">
+          <li>Calms down within 10 minutes after caregiver leaves</li>
+          <li>Notices other kids' feelings and responds</li>
+          <li>Takes turns in games with guidance</li>
+          <li>Shows concern for a hurt or upset friend</li>
+          <li>Follows 3-step directions</li>
+          <li>Cooperates with simple household rules</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#7A8B6F">
+        <div class="domain-label" style="color:#7A8B6F">Language / Communication</div>
+        <ul class="milestone-list">
+          <li>Holds a back-and-forth conversation (2-3 exchanges)</li>
+          <li>Asks "who," "what," "where," and "why" questions</li>
+          <li>Says their name when asked</li>
+          <li>Strangers can understand most of what they say</li>
+          <li>Tells you what comes next in a familiar story</li>
+          <li>Uses "yesterday" and simple time words</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#C49A3C">
+        <div class="domain-label" style="color:#C49A3C">Cognitive</div>
+        <ul class="milestone-list">
+          <li>Draws a circle when shown how</li>
+          <li>Avoids touching hot objects after being told once</li>
+          <li>Plays make-believe with dolls, animals, people</li>
+          <li>Names some colors when asked</li>
+          <li>Counts 3 objects</li>
+          <li>Understands "mine," "his," "hers"</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#4A7B9A">
+        <div class="domain-label" style="color:#4A7B9A">Movement / Physical</div>
+        <ul class="milestone-list">
+          <li>Puts on some clothing without help</li>
+          <li>Uses a fork</li>
+          <li>Rides a tricycle</li>
+          <li>Strings large beads</li>
+          <li>Climbs, runs, and jumps with more coordination</li>
+          <li>Draws lines and copies simple shapes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chapter-nav">
+      <div class="chapter-nav-label">Chapters most relevant right now</div>
+      <div class="chapter-chips">
+        <span class="chapter-chip" onclick="showScreen('ch10')">10 · The "Why" Phase</span>
+        <span class="chapter-chip" onclick="showScreen('ch13')">13 · Emotional Regulation</span>
+        <span class="chapter-chip" onclick="showScreen('ch16')">16 · Getting Dressed &amp; Ready</span>
+        <span class="chapter-chip" onclick="showScreen('ch15')">15 · Whining</span>
+        <span class="chapter-chip" onclick="showScreen('ch17')">17 · Public Behavior</span>
+        <span class="chapter-chip" onclick="showScreen('ch12')">12 · Sibling Dynamics</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 YEARS -->
+  <div class="age-panel" id="age-4yr">
+    <div class="age-badge" style="color:#1F1A14">4 Years</div>
+    <p class="age-summary">Logical thinking is developing. Your child plans ahead, negotiates, understands fairness, and cooperative play is fully here. This is the Foundation Before Freedom payoff: a child who grew up inside structure walks toward independence.</p>
+    <div class="domain-grid">
+      <div class="domain-card" style="border-top-color:#B85C38">
+        <div class="domain-label" style="color:#B85C38">Social / Emotional</div>
+        <ul class="milestone-list">
+          <li>Prefers playing with other children over adults</li>
+          <li>Cooperates and takes turns without as much prompting</li>
+          <li>Comforts friends or family when they are upset</li>
+          <li>Avoids real danger (does not jump from high places)</li>
+          <li>Likes to be silly and makes up jokes</li>
+          <li>Follows game rules and understands fairness</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#7A8B6F">
+        <div class="domain-label" style="color:#7A8B6F">Language / Communication</div>
+        <ul class="milestone-list">
+          <li>Says sentences with 5-6 words</li>
+          <li>Tells a simple story with a beginning, middle, and end</li>
+          <li>Answers simple questions about a story</li>
+          <li>Says their name and address</li>
+          <li>Sings songs and recites short poems from memory</li>
+          <li>Uses words like "yesterday" and "tomorrow"</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#C49A3C">
+        <div class="domain-label" style="color:#C49A3C">Cognitive</div>
+        <ul class="milestone-list">
+          <li>Names some colors and numbers</li>
+          <li>Draws a person with 3+ body parts</li>
+          <li>Tells what comes next in a well-known story</li>
+          <li>Understands the idea of counting</li>
+          <li>Understands "same" and "different"</li>
+          <li>Plans ahead in simple ways ("first I'll do this, then that")</li>
+        </ul>
+      </div>
+      <div class="domain-card" style="border-top-color:#4A7B9A">
+        <div class="domain-label" style="color:#4A7B9A">Movement / Physical</div>
+        <ul class="milestone-list">
+          <li>Catches a bounced ball most of the time</li>
+          <li>Pours water or serves food with little spilling</li>
+          <li>Unbuttons some buttons</li>
+          <li>Holds crayon between fingers and thumb (not fist)</li>
+          <li>Hops on one foot</li>
+          <li>Uses scissors to cut paper</li>
+        </ul>
+      </div>
+    </div>
+    <div class="chapter-nav">
+      <div class="chapter-nav-label">Chapters most relevant right now</div>
+      <div class="chapter-chips">
+        <span class="chapter-chip" onclick="showScreen('ch20')">20 · Raising a Confident Kid</span>
+        <span class="chapter-chip" onclick="showScreen('ch12')">12 · Sibling Dynamics</span>
+        <span class="chapter-chip" onclick="showScreen('ch17')">17 · Public Behavior</span>
+        <span class="chapter-chip" onclick="showScreen('ch8')">08 · Independence-Building</span>
+        <span class="chapter-chip" onclick="showScreen('ch19')">19 · Mom Guilt &amp; Consistency</span>
+        <span class="chapter-chip" onclick="showScreen('ch4')">04 · Screen Weaning</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="qr-cdc-note">Milestones sourced from CDC "Learn the Signs. Act Early." developmental guidelines. Every child develops at their own pace. These windows mark when capability opens, not when it closes.</p>
 
   <div style="text-align:center">
     <button class="start-btn" onclick="showScreen('pillars')">Continue to The Foundation &#8594;</button>
@@ -2611,6 +2806,7 @@ function go(d){ const i=ORDER.indexOf(currentId()); const n=i+d; if(n>=0&&n<ORDE
 function toggleNav(){ document.querySelector('.sidebar').classList.toggle('open'); document.getElementById('scrim').classList.toggle('show'); }
 function closeNav(){ document.querySelector('.sidebar').classList.remove('open'); document.getElementById('scrim').classList.remove('show'); }
 function downloadPDF(){ window.print(); }
+function showAge(id,btn){ document.querySelectorAll('.age-panel').forEach(p=>p.classList.remove('qr-visible')); document.querySelectorAll('.age-tab').forEach(t=>t.classList.remove('qr-active')); document.getElementById('age-'+id).classList.add('qr-visible'); btn.classList.add('qr-active'); }
 document.addEventListener('keydown',e=>{ if(e.target.tagName==='INPUT')return; if(e.key==='ArrowRight')go(1); if(e.key==='ArrowLeft')go(-1); });
 window.addEventListener('DOMContentLoaded',()=>{ const h=(location.hash||'').replace('#',''); showScreen(ORDER.indexOf(h)>=0?h:'cover'); });
 </script>
