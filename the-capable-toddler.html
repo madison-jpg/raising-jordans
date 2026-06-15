@@ -116,6 +116,15 @@
   .age-row:last-child{border-bottom:0;padding-bottom:0}
   .age-badge{flex-shrink:0;font-family:'Fraunces';font-weight:700;font-size:11px;color:#fff;background:var(--ink);border-radius:99px;padding:3px 10px;white-space:nowrap;margin-top:2px}
   .age-text{font-size:14px;color:var(--ink);line-height:1.55;margin:0}
+  .jump-menu{position:relative;margin:20px 0 26px}
+  .jump-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;font-family:'Inter'}
+  .jump-btn:hover{border-color:var(--clay);color:var(--clay)}
+  .jump-btn svg{transition:transform .2s;flex-shrink:0}
+  .jump-menu.open .jump-btn svg{transform:rotate(180deg)}
+  .jump-dropdown{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1);padding:6px 0;min-width:260px;z-index:30;display:none}
+  .jump-menu.open .jump-dropdown{display:block}
+  .jump-item{display:block;width:100%;padding:11px 16px;font-size:14px;color:var(--ink);cursor:pointer;text-align:left;background:none;border:0;font-family:'Inter'}
+  .jump-item:hover{background:var(--cream);color:var(--clay)}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
   .tag{font-size:10.5px;font-weight:600;letter-spacing:.04em;color:var(--sage);background:var(--sage-soft);padding:4px 10px;border-radius:20px}
 
@@ -1429,8 +1438,17 @@
 </svg><figcaption>Potty training is the purest example. The body opens the window. You walk through it.</figcaption></figure>
   <div class="ch-intro"><p>This is the chapter people argue with the most, so let me say it plainly. Potty training is the clearest example of Foundation Before Freedom in the entire book. The body opens a window. You walk through it. That is the whole thing.</p>
 <p>Here is what nobody tells you. The biology is the easy part, and it shows up early, around 18 to 24 months for most kids. The hard part is not your child. The hard part is you holding the structure long enough for it to work. Generic advice tells you to wait until your child is "ready," which usually means wait until your two-year-old has had a year and a half to form an opinion about the toilet. By then you are no longer training a body. You are negotiating with a personality. Enter early, before "I do not want to" is even a thought, and there is nothing to negotiate. You go first. You hold the structure. The capability follows.</p></div>
-  
-<div class="formula">
+
+<div class="jump-menu" id="ch14-jump">
+  <button class="jump-btn" onclick="toggleJump('ch14-jump')">Jump to section <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="jump-dropdown">
+    <button class="jump-item" onclick="jumpTo('ch14-f1');toggleJump('ch14-jump')">Formula #1 — The Consistency Blueprint</button>
+    <button class="jump-item" onclick="jumpTo('ch14-f2');toggleJump('ch14-jump')">Formula #2 — The Patience Reset</button>
+    <button class="jump-item" onclick="jumpTo('ch14-age');toggleJump('ch14-jump')">Apply It By Age</button>
+  </div>
+</div>
+
+<div class="formula" id="ch14-f1">
   <div class="f-head"><span class="f-kicker">Formula #1</span><h3>The Consistency Blueprint</h3></div>
   <div class="window">18 to 24 months for most children, adjusted by you. The bladder can hold and release, the sphincter has enough control. The biology is genuinely ready and it is genuinely there. This is the 50% you respect.</div>
   <div class="reframe">
@@ -1449,7 +1467,7 @@
   <div class="tags"><span class="tag">Structure blueprint</span><span class="tag">Early entry</span><span class="tag">Parent behavior</span></div>
 </div>
 
-<div class="formula">
+<div class="formula" id="ch14-f2">
   <div class="f-head"><span class="f-kicker">Formula #2</span><h3>The Patience Reset</h3></div>
   <div class="window">The same 18 to 24 month window, but this formula is about YOU, not the clock. Your nervous system is the variable here. Potty training does not fail on the child's learning curve. It fails the moment your frustration runs out.</div>
   <div class="reframe">
@@ -1468,7 +1486,7 @@
   <div class="tags"><span class="tag">Patience reset</span><span class="tag">Parent behavior</span><span class="tag">Parent expertise</span></div>
 </div>
 
-<div class="age-callout">
+<div class="age-callout" id="ch14-age">
   <span class="age-callout-label">Apply it by age</span>
   <div class="age-row">
     <span class="age-badge">12 mo</span>
@@ -2635,6 +2653,9 @@ function showMilestone(age,domain){
 }
 document.addEventListener('keydown',e=>{ if(e.target.tagName==='INPUT')return; if(e.key==='ArrowRight')go(1); if(e.key==='ArrowLeft')go(-1); });
 window.addEventListener('DOMContentLoaded',()=>{ const h=(location.hash||'').replace('#',''); showScreen(ORDER.indexOf(h)>=0?h:'cover'); });
+function toggleJump(id){document.getElementById(id).classList.toggle('open');}
+function jumpTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+document.addEventListener('click',function(e){document.querySelectorAll('.jump-menu.open').forEach(m=>{if(!m.contains(e.target))m.classList.remove('open');});});
 </script>
 
 </body>
