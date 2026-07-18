@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Download Your Book — Raising Jordans</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #FAF5EE; --ink: #1F1A14; --ink-soft: #4A4036;
+    --clay: #B85C38; --clay-dark: #8E4225; --sage: #7A8B6F; --line: #D9CDB7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cream); color: var(--ink);
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .box {
+    max-width: 540px; width: 100%; text-align: center;
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 14px; padding: 56px 40px;
+    box-shadow: 0 24px 48px -24px rgba(31,26,20,0.18);
+  }
+  .check {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #EDF4EB; display: flex; align-items: center;
+    justify-content: center; margin: 0 auto 24px;
+  }
+  .check svg { width: 28px; height: 28px; }
+  .eyebrow {
+    text-transform: uppercase; letter-spacing: 0.18em;
+    font-size: 12px; font-weight: 600; color: var(--sage);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500; font-size: 38px; line-height: 1.1;
+    margin: 0 0 14px; letter-spacing: -0.02em;
+  }
+  .sub {
+    color: var(--ink-soft); font-size: 16px;
+    line-height: 1.6; margin: 0 0 32px;
+  }
+  .btn-download {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--clay); color: #fff;
+    padding: 16px 28px; border-radius: 10px;
+    font-weight: 600; text-decoration: none; font-size: 16px;
+    transition: background 0.15s;
+  }
+  .btn-download:hover { background: var(--clay-dark); }
+  .btn-download svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .divider {
+    border: none; border-top: 1px solid var(--line);
+    margin: 36px 0;
+  }
+  .footer-note {
+    font-size: 14px; color: var(--ink-soft); line-height: 1.6;
+  }
+  .footer-note a {
+    color: var(--clay); text-decoration: none; font-weight: 600;
+  }
+  .footer-note a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+
+    <div class="eyebrow">Payment confirmed</div>
+    <h1>Thank you — enjoy the book.</h1>
+    <p class="sub">Click the button below to download your copy. Save it somewhere you'll actually find it.</p>
+
+    <a class="btn-download" href="/the-capable-toddler.pdf" download target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      Download Your Guidebook
+    </a>
+
+    <hr class="divider" />
+
+    <p class="footer-note">
+      Questions? Email me at <a href="mailto:madison@raisingjordans.com">madison@raisingjordans.com</a><br>
+      Come hang out on <a href="https://www.tiktok.com/@raisingjordans" target="_blank" rel="noopener">TikTok</a> — new lessons every day.
+    </p>
+  </div>
+</body>
+</html>

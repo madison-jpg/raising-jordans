@@ -4,9 +4,11 @@
 Madison Jordan is building a motherhood brand, "Raising Jordans," on TikTok @raisingjordans. She is a former au pair for a high profile family in Australia, a half-decade elementary teacher, and a lifelong childcare expert. Her goal: grow her email list, then sell a small ebook, then launch a flagship course. She is non-technical. Do the technical work for her. Never ask her to open files or run commands you can run yourself.
 
 ## What lives in this repo
-- `index.html` — landing page with email capture (hero photo `madison-tyler.jpg`)
+- `index.html` — landing page with email capture (hero photo `madison-tyler.jpg`) + the Guidebook buy section ($9.99, links to the Stripe payment link)
 - `guide.html` — the free 8-habit lead magnet (gated: localStorage flag unlocks `guide.html?unlocked=1`)
-- `the-capable-toddler.html` — the $4.99 ebook reader (currently unlisted, pre-launch)
+- `the-capable-toddler.html` — the Guidebook reader (unlisted URL, the paid product)
+- `the-capable-toddler.pdf` — the sellable PDF, rendered from the reader HTML. IMPORTANT: after ANY content edit to `the-capable-toddler.html`, re-render this PDF (headless Chrome: `--headless --no-pdf-header-footer --virtual-time-budget=20000 --print-to-pdf`) and commit both together, or buyers get an outdated book.
+- `download.html` — post-purchase success page (Stripe redirects here after payment; button downloads the PDF)
 - `madison-tyler.jpg` — hero photo
 
 ## Deploy workflow (memorize this)
@@ -25,7 +27,7 @@ Both signup forms POST JSON to a Make.com webhook owned by Tyler, which writes l
 - Signature framework: Capable Kid Equation = Connection / Regulation / Skill. Ebook expands it into "Foundation Before Freedom."
 
 ## The funnel and the roadmap
-Current: TikTok > landing page > email > free guide (LIVE). Next: $4.99 "The Capable Toddler" ebook via Stripe + MailerLite + ManyChat (planned, not built). Flagship: "Raising Capable Kids" course, $97 to $197 (scaffold on request). Build any stage only when Madison asks.
+Current: TikTok > landing page > email > free guide (LIVE). LIVE as of July 2026: "The Capable Toddler" Guidebook sells for $9.99 via Stripe payment link `https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00` (Tyler's Stripe account); after payment Stripe redirects to `/download` which serves the PDF. Always call it the "Guidebook" in user-facing copy, never "e-book". Next: MailerLite + ManyChat. Flagship: "Raising Capable Kids" course, $97 to $197 (scaffold on request). Build any stage only when Madison asks.
 
 ## How to work with Madison
 She speaks in plain language ("change my headline," "show me my leads," "build the ebook checkout"). Translate that into edits, commits, and pushes. Always confirm what went live with a URL. Keep things simple and few-steps-at-a-time.
