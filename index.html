@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Raising Jordans — Capable Kids. Confident Moms.</title>
+<title>Raising Jordans | Capable Kids. Confident Moms.</title>
 <meta name="description" content="Madison Jordan helps mothers raise capable, confident, resilient kids. Drawing from a lifetime in childcare, a teaching career, and years as an au pair traveling the world for different families." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -273,85 +273,139 @@
     display: block;
   }
 
-  /* E-book section */
+  /* Guidebook section */
   .ebook {
+    background: linear-gradient(150deg, #C96A42 0%, var(--clay) 45%, var(--clay-dark) 100%);
     padding: 96px 0;
-    border-bottom: 1px solid var(--line);
+    color: var(--cream);
   }
-  .ebook .inner {
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
+  .ebook .grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 72px;
+    align-items: center;
   }
   .ebook .badge {
     display: inline-block;
-    background: var(--clay);
-    color: #fff;
+    background: var(--cream);
+    color: var(--clay-dark);
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    padding: 5px 14px;
+    padding: 6px 16px;
     border-radius: 100px;
     margin-bottom: 22px;
   }
   .ebook h2 {
-    font-size: clamp(32px, 4.5vw, 48px);
-    margin-bottom: 16px;
+    color: #fff;
+    font-size: clamp(34px, 4.5vw, 52px);
+    margin-bottom: 18px;
   }
   .ebook .sub {
-    color: var(--ink-soft);
+    color: rgba(250,245,238,0.9);
     font-size: 18px;
     line-height: 1.65;
-    margin-bottom: 40px;
+    margin-bottom: 26px;
   }
-  .ebook .features {
-    max-width: 460px;
-    margin: 0 auto 40px;
-    text-align: left;
+  .ebook .sub strong { color: #fff; }
+  .ebook .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+  .ebook .chip {
+    background: rgba(250,245,238,0.14);
+    border: 1px solid rgba(250,245,238,0.3);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
   }
+  .ebook .features { margin: 0 0 34px; }
   .ebook .feat {
     display: flex;
     align-items: flex-start;
     gap: 13px;
-    padding: 13px 0;
-    border-bottom: 1px solid var(--line);
-    color: var(--ink-soft);
-    font-size: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(250,245,238,0.2);
+    color: rgba(250,245,238,0.92);
+    font-size: 15.5px;
     line-height: 1.5;
   }
   .ebook .feat:last-child { border-bottom: 0; }
   .ebook .feat-check {
-    color: var(--clay);
+    color: var(--cream);
     font-weight: 700;
     font-size: 16px;
     margin-top: 1px;
     flex-shrink: 0;
   }
-  .ebook .price {
-    font-family: 'Fraunces', serif;
-    font-size: 52px;
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: -0.03em;
-    margin-bottom: 22px;
-  }
   .btn-buy {
     display: inline-block;
-    background: var(--clay);
-    color: #fff;
-    padding: 17px 40px;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 17px;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 18px 44px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
     text-decoration: none;
-    transition: background .15s;
+    transition: transform .1s, box-shadow .15s;
+    box-shadow: 0 18px 40px -14px rgba(31,26,20,0.6);
   }
-  .btn-buy:hover { background: var(--clay-dark); text-decoration: none; }
+  .btn-buy:hover { text-decoration: none; transform: translateY(-2px); box-shadow: 0 24px 48px -14px rgba(31,26,20,0.7); }
   .ebook .note {
-    margin-top: 14px;
-    font-size: 13px;
-    color: var(--ink-soft);
+    margin-top: 16px;
+    font-size: 13.5px;
+    color: rgba(250,245,238,0.75);
+  }
+  .ebook .note a { color: #fff; text-decoration: underline; }
+  .gb-visual { position: relative; }
+  .gb-page {
+    position: absolute;
+    width: 46%;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid rgba(31,26,20,0.12);
+    box-shadow: 0 18px 40px -12px rgba(31,26,20,0.5);
+  }
+  .gb-page img { width: 100%; display: block; border-radius: 6px; }
+  .gb-page.l { left: -4%; top: 10%; transform: rotate(-9deg); }
+  .gb-page.r { right: -4%; top: 6%; transform: rotate(8deg); }
+  .gb-cover {
+    position: relative;
+    width: 66%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(31,26,20,0.15);
+    box-shadow: 0 34px 70px -20px rgba(31,26,20,0.65);
+    transform: rotate(-2deg);
+    background: #fff;
+  }
+  .gb-cover img { width: 100%; display: block; }
+  .gb-quote {
+    position: absolute;
+    left: 4%; right: 4%;
+    bottom: -30px;
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 14px;
+    padding: 15px 20px;
+    transform: rotate(1.2deg);
+    box-shadow: 0 24px 50px -16px rgba(31,26,20,0.6);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .gb-quote .lbl {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D9906E;
+    margin-bottom: 5px;
   }
 
   /* Second CTA */
@@ -400,9 +454,12 @@
 
   @media (max-width: 880px) {
     .hero { padding: 56px 0 48px; }
-    .hero .grid, .story .grid, .guide .grid {
+    .hero .grid, .story .grid, .guide .grid, .ebook .grid {
       grid-template-columns: 1fr; gap: 48px;
     }
+    .ebook .grid { gap: 72px; }
+    .gb-page.l { left: 2%; }
+    .gb-page.r { right: 2%; }
     .creds .list { gap: 16px 24px; }
     .creds .list .sep { display: none; }
     .topnav { display: none; }
@@ -411,7 +468,7 @@
 </head>
 <body>
 
-<a class="announce" href="guidebook.html">NEW: The Capable Toddler Guidebook is here. 20 battles, 40 formulas, $9.99.<span class="arrow">See what's inside &rarr;</span></a>
+<a class="announce" href="guidebook.html">NEW: The Capable Toddler Guidebook is here. 20 battles, 40 formulas, one calm plan.<span class="arrow">See what's inside &rarr;</span></a>
 
 <header class="topbar">
   <div class="wrap row">
@@ -519,19 +576,34 @@
 </section>
 
 <section class="ebook" id="ebook">
-  <div class="wrap inner">
-    <span class="badge">The Guidebook</span>
-    <h2>The Capable Toddler</h2>
-    <p class="sub">The complete system for ages 1 to 4. Twenty battles. Forty word-for-word formulas. One calm plan, written from a lifetime in childcare and the toddler I'm raising at home right now.</p>
-    <div class="features">
-      <div class="feat"><span class="feat-check">✓</span><span>Every major toddler battle: sleep, potty, meltdowns, hitting, eating, listening, and 14 more</span></div>
-      <div class="feat"><span class="feat-check">✓</span><span>40 named formulas with the exact words to say, and what NOT to do</span></div>
-      <div class="feat"><span class="feat-check">✓</span><span>Every formula adjusted by age, from 12 months to 3 and beyond</span></div>
-      <div class="feat"><span class="feat-check">✓</span><span>163 designed pages, the Milestone Map, and printable tools</span></div>
+  <div class="wrap grid">
+    <div>
+      <span class="badge">The Guidebook</span>
+      <h2>The Capable Toddler</h2>
+      <p class="sub"><strong>Every skill you wait on becomes a battle you fight later.</strong> This is the complete system for ages 1 to 4: every major battle in your house, the exact words to say in the moment, and a calm plan you can run tonight.</p>
+      <div class="chips">
+        <span class="chip">20 battles</span>
+        <span class="chip">40 formulas</span>
+        <span class="chip">37 word-for-word scripts</span>
+        <span class="chip">163 designed pages</span>
+      </div>
+      <div class="features">
+        <div class="feat"><span class="feat-check">✓</span><span>Sleep, potty, meltdowns, hitting, eating, listening, and 14 more, each with its own chapter</span></div>
+        <div class="feat"><span class="feat-check">✓</span><span>Named formulas with SAY THIS scripts, and exactly what NOT to do</span></div>
+        <div class="feat"><span class="feat-check">✓</span><span>Every formula adjusted for your child's age, from 12 months to 3 and beyond</span></div>
+      </div>
+      <a class="btn-buy" href="guidebook.html">See what's inside &rarr;</a>
+      <div class="note">Instant download. Yours forever.</div>
     </div>
-    <div class="price">$9.99</div>
-    <a class="btn-buy" href="guidebook.html">See what's inside &rarr;</a>
-    <div class="note">Instant PDF download. Yours to keep. <a href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Ready now? Buy it here.</a></div>
+    <div class="gb-visual">
+      <div class="gb-page l"><img src="preview-exit.png" alt="A formula page from The Capable Toddler" loading="lazy" /></div>
+      <div class="gb-page r"><img src="preview-map.png" alt="The Milestone Map" loading="lazy" /></div>
+      <div class="gb-cover"><img src="preview-cover.jpg" alt="The Capable Toddler Guidebook cover" loading="lazy" /></div>
+      <div class="gb-quote">
+        <div class="lbl">Say this</div>
+        "I love you. I always come back. See you after nap."
+      </div>
+    </div>
   </div>
 </section>
 

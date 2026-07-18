@@ -136,30 +136,64 @@
   .hero h1 { font-size: clamp(38px, 5vw, 58px); margin-bottom: 22px; }
   .hero .lede { font-size: 19px; color: var(--ink-soft); max-width: 560px; margin-bottom: 34px; }
   .hero .lede strong { color: var(--ink); }
-  .cover-wrap { position: relative; display: flex; justify-content: center; }
-  .cover-frame {
-    width: min(320px, 80%);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 40px 90px -30px rgba(31,26,20,0.55);
-    transform: rotate(2deg);
-    border: 1px solid var(--line);
+  .cover-wrap { position: relative; }
+  .cover-scene {
+    position: relative;
+    background: linear-gradient(150deg, #C96A42 0%, var(--clay) 45%, var(--clay-dark) 100%);
+    border-radius: 22px;
+    padding: 44px 32px 78px;
+    box-shadow: 0 40px 90px -30px rgba(142,66,37,0.55);
+    overflow: visible;
+  }
+  .sc-page {
+    position: absolute;
+    width: 44%;
+    border-radius: 6px;
+    border: 1px solid rgba(31,26,20,0.12);
+    box-shadow: 0 18px 40px -12px rgba(31,26,20,0.45);
     background: #fff;
   }
-  .cover-frame img { width: 100%; display: block; }
-  .cover-badge {
+  .sc-page img { width: 100%; display: block; border-radius: 6px; }
+  .sc-left { left: 5%; top: 11%; transform: rotate(-9deg); }
+  .sc-right { right: 5%; top: 8%; transform: rotate(8deg); }
+  .sc-cover {
+    position: relative;
+    width: 64%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(31,26,20,0.15);
+    box-shadow: 0 34px 70px -20px rgba(31,26,20,0.65);
+    transform: rotate(-2deg);
+    background: #fff;
+  }
+  .sc-cover img { width: 100%; display: block; }
+  .sc-say {
     position: absolute;
-    top: -14px; right: 4%;
+    left: 7%; right: 7%;
+    bottom: -26px;
     background: var(--ink);
     color: var(--cream);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    padding: 9px 16px;
-    border-radius: 100px;
-    transform: rotate(4deg);
-    box-shadow: 0 10px 24px -8px rgba(31,26,20,0.5);
+    border-radius: 14px;
+    padding: 16px 22px;
+    transform: rotate(1.2deg);
+    box-shadow: 0 24px 50px -16px rgba(31,26,20,0.6);
   }
+  .sc-say .lbl {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D9906E;
+    margin-bottom: 5px;
+  }
+  .sc-say .words {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .sc-say .src { font-size: 10.5px; color: rgba(250,245,238,0.55); margin-top: 6px; }
 
   /* Credibility strip */
   .creds { background: var(--cream-2); padding: 32px 0; border-bottom: 1px solid var(--line); }
@@ -367,6 +401,59 @@
   }
   .t-card .who .meta { color: var(--ink-soft); font-weight: 500; }
 
+  /* Scattered quote bars (testimonials) */
+  .quote-bar {
+    max-width: 720px;
+    margin: 56px auto 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 32px;
+    box-shadow: 0 20px 44px -26px rgba(31,26,20,0.35);
+    position: relative;
+  }
+  .quote-bar::before {
+    content: "\201C";
+    position: absolute;
+    top: -18px; left: 24px;
+    font-family: 'Fraunces', serif;
+    font-size: 54px;
+    line-height: 1;
+    color: var(--clay);
+  }
+  .quote-bar .q {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .quote-bar .who {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .quote-bar .who .meta { font-weight: 500; opacity: 0.8; }
+  .quote-bar.qb-ink { background: var(--ink); border-color: var(--ink); }
+  .quote-bar.qb-ink .q { color: var(--cream); }
+  .quote-bar.qb-ink .who { color: rgba(250,245,238,0.7); }
+  .quote-bar.qb-clay { background: var(--clay); border-color: var(--clay); }
+  .quote-bar.qb-clay .q { color: #fff; }
+  .quote-bar.qb-clay .who { color: rgba(255,255,255,0.8); }
+  .quote-bar.qb-clay::before { color: var(--cream); }
+  .t-duo {
+    max-width: 900px;
+    margin: 56px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 720px) {
+    .t-duo { grid-template-columns: 1fr; }
+    .quote-bar { padding: 22px 24px; }
+    .quote-bar .q { font-size: 17px; }
+  }
+
   /* For / not for */
   .fit { padding: 96px 0; border-bottom: 1px solid var(--line); }
   .fit .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
@@ -496,9 +583,15 @@
       <div class="trust">Instant download · 163 designed pages · Read on phone, tablet, or print</div>
     </div>
     <div class="cover-wrap">
-      <div class="cover-badge">163 PAGES</div>
-      <div class="cover-frame">
-        <img src="preview-cover.jpg" alt="The Capable Toddler Guidebook cover" />
+      <div class="cover-scene">
+        <div class="sc-page sc-left"><img src="preview-exit.png" alt="Formula page: The Confident Exit" /></div>
+        <div class="sc-page sc-right"><img src="preview-map.png" alt="The Milestone Map" /></div>
+        <div class="sc-cover"><img src="preview-cover.jpg" alt="The Capable Toddler Guidebook cover" /></div>
+        <div class="sc-say">
+          <div class="lbl">Say this</div>
+          <div class="words">"I love you. I always come back. See you after nap."</div>
+          <div class="src">Formula #2 · The Confident Exit · one of 40 inside</div>
+        </div>
       </div>
     </div>
   </div>
@@ -538,6 +631,12 @@
       <span class="src">From the introduction, Foundation Before Freedom</span>
     </div>
     <p><strong>The stakes are real.</strong> Every month spent waiting is a month the window narrows. The tantrum gets more practiced. The pattern gets more permanent. And you get more tired.</p>
+
+    <!-- PLACEHOLDER testimonial (class ph-t): replace with a real TikTok comment -->
+    <div class="quote-bar ph-t">
+      <div class="q">I read the meltdown chapter in the school pickup line and used it twenty minutes later. It worked on the FIRST try. I have never moved that fast on advice in my life.</div>
+      <div class="who">Tori <span class="meta">· mom of a 2-year-old and a 4-year-old</span></div>
+    </div>
   </div>
 </section>
 
@@ -565,6 +664,12 @@
       </div>
     </div>
     <p style="margin-top: 28px; font-size: 15px;">That is the Capable Kid Equation, and the Guidebook installs it into every battle of the toddler years, one formula at a time.</p>
+
+    <!-- PLACEHOLDER testimonial (class ph-t): replace with a real TikTok comment -->
+    <div class="quote-bar qb-clay ph-t" style="text-align: left;">
+      <div class="q">girl. the word economy thing. I said ONE sentence instead of my usual twelve and he just... did it. I am still staring at the wall.</div>
+      <div class="who">Brit <span class="meta">· mom of a 3-year-old</span></div>
+    </div>
   </div>
 </section>
 
@@ -608,6 +713,18 @@
       <div class="chap"><span class="n">19</span>Mom Guilt &amp; Consistency</div>
       <div class="chap"><span class="n">20</span>Raising a Confident Kid</div>
     </div>
+
+    <!-- PLACEHOLDER testimonials (class ph-t): replace with real TikTok comments -->
+    <div class="t-duo">
+      <div class="t-card ph-t">
+        "We were on potty chart number FOUR. Ditched the stickers, ran the window the way she teaches it, and we were done in nine days. I want to cry when I think about the months we wasted."
+        <div class="who"><span class="av">C</span> Casey <span class="meta">· mom of a 2.5-year-old</span></div>
+      </div>
+      <div class="t-card ph-t">
+        "the hitting chapter alone is worth ten times this. we went from daily incident reports at daycare to NONE in two weeks. his teacher asked what we changed"
+        <div class="who"><span class="av">S</span> Sam <span class="meta">· mom of a 20-month-old</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -624,6 +741,12 @@
       <div class="pv"><img src="preview-map.png" alt="The Milestone Map development chart" loading="lazy" /><div class="cap">The Milestone Map, ages 1 to 4</div></div>
       <div class="pv"><img src="preview-exit.png" alt="Formula page: The Confident Exit" loading="lazy" /><div class="cap">A formula page, word for word</div></div>
       <div class="pv"><img src="preview-tracker.png" alt="21-Day Tracker printable" loading="lazy" /><div class="cap">Printables: tracker, sticker chart</div></div>
+    </div>
+
+    <!-- PLACEHOLDER testimonial (class ph-t): replace with a real TikTok comment -->
+    <div class="quote-bar qb-ink ph-t">
+      <div class="q">This is the first parenting thing my husband has actually read. He quotes it at dinner now. Who IS this man.</div>
+      <div class="who">Elle <span class="meta">· mom of two under 4</span></div>
     </div>
   </div>
 </section>
@@ -669,6 +792,13 @@
       <div class="fx-note">Plus the strider practice, the what-not-to-do, and the full age-by-age breakdown, inside the book.</div>
     </div>
   </div>
+  <div class="wrap">
+    <!-- PLACEHOLDER testimonial (class ph-t): replace with a real TikTok comment -->
+    <div class="quote-bar ph-t">
+      <div class="q">The scripts are word for word what my speech therapist friend charges $150 an hour to tell people. I checked with her. She said "yeah, that's it, buy the book."</div>
+      <div class="who">Jordan B. <span class="meta">· mom of a 19-month-old</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- OUTCOMES -->
@@ -693,10 +823,11 @@
 <!--
   ============================================================
   PLACEHOLDER TESTIMONIALS: REPLACE BEFORE DRIVING TRAFFIC.
-  These are drafted placeholders so the section is designed and
-  ready. Swap each quote with a REAL comment from Madison's
-  TikTok (@raisingjordans) before the link goes in her bio.
-  Keep them short, keep the mom's first name or handle style.
+  Every testimonial on this page carries class "ph-t" (search
+  for ph-t: quote bars, duo cards, and this grid). All of them
+  are drafted placeholders. Swap each quote with a REAL comment
+  from Madison's TikTok (@raisingjordans) before the link goes
+  in her bio. Keep them short, first name + kid age style.
   ============================================================
 -->
 <section class="proof">
@@ -707,29 +838,41 @@
       <p>Pulled from the comment sections at @raisingjordans, where these formulas show up on camera every week.</p>
     </div>
     <div class="t-grid">
-      <div class="t-card">
+      <div class="t-card ph-t">
         "Tried the goodbye script from your video this morning. First drop-off in MONTHS with no tears. I cried in the car, but happy tears."
         <div class="who"><span class="av">K</span> Kayla <span class="meta">· mom of a 2-year-old</span></div>
       </div>
-      <div class="t-card">
+      <div class="t-card ph-t">
         "The bedtime sequence changed our whole house. My husband thought I hired someone. It was a 30-second video and a sticky note on the door."
         <div class="who"><span class="av">M</span> Mariah <span class="meta">· mom of two under 4</span></div>
       </div>
-      <div class="t-card">
+      <div class="t-card ph-t">
         "I did the pause-before-helping thing for one week and my 18-month-old now puts her own shoes on. HER OWN SHOES."
         <div class="who"><span class="av">J</span> Jess <span class="meta">· first-time mom</span></div>
       </div>
-      <div class="t-card">
+      <div class="t-card ph-t">
         "Your restaurant video saved our anniversary dinner. The pre-load thing is witchcraft. We ate a whole meal IN PUBLIC."
         <div class="who"><span class="av">D</span> Dani <span class="meta">· mom of a 3-year-old</span></div>
       </div>
-      <div class="t-card">
+      <div class="t-card ph-t">
         "As a daycare teacher: everything this woman says is what we actually do in the classroom. Parents, listen to her."
         <div class="who"><span class="av">R</span> Rachel <span class="meta">· early childhood educator</span></div>
       </div>
-      <div class="t-card">
+      <div class="t-card ph-t">
         "I stopped saying 'what do you say' like you said and just modeled it. Three weeks later he thanked the checkout lady unprompted. I about fell over."
         <div class="who"><span class="av">A</span> Amber <span class="meta">· mom of a 2.5-year-old</span></div>
+      </div>
+      <div class="t-card ph-t">
+        "My mother in law asked what changed at bedtime. EVERYTHING changed. The sequence is the boss now, not me, and somehow that made me more patient, not less."
+        <div class="who"><span class="av">N</span> Nina <span class="meta">· mom of a 3-year-old</span></div>
+      </div>
+      <div class="t-card ph-t">
+        "bought it for the sleep chapter. stayed for the mom guilt one. cried, felt seen, fixed bedtime, in that order"
+        <div class="who"><span class="av">M</span> Maya <span class="meta">· first-time mom</span></div>
+      </div>
+      <div class="t-card ph-t">
+        "The why phase chapter ended the four hundred questions standoff in my kitchen. The flip and build thing is genius and my daughter thinks it's a game."
+        <div class="who"><span class="av">P</span> Priya <span class="meta">· mom of a 3.5-year-old</span></div>
       </div>
     </div>
   </div>
