@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Capable Toddler Guidebook | Raising Jordans</title>
+<meta name="description" content="The complete system for ages 1 to 4. Twenty battles, forty word-for-word formulas, one calm plan. By Madison Jordan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "The Capable Toddler Guidebook",
+  "description": "The complete system for raising a capable toddler, ages 1 to 4. Twenty battles, forty word-for-word formulas.",
+  "brand": { "@type": "Brand", "name": "Raising Jordans" },
+  "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+}
+</script>
+
+<style>
+  :root {
+    --cream: #FAF5EE;
+    --cream-2: #F2EADE;
+    --beige: #E6D9C4;
+    --ink: #1F1A14;
+    --ink-soft: #4A4036;
+    --clay: #B85C38;
+    --clay-dark: #8E4225;
+    --sage: #7A8B6F;
+    --line: #D9CDB7;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  a { color: var(--clay-dark); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--clay);
+    margin-bottom: 20px;
+  }
+
+  /* Top bar */
+  .topbar {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--cream);
+  }
+  .topbar .row { display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: 'Fraunces', serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); }
+  .brand .dot { color: var(--clay); }
+  .topnav a { color: var(--ink-soft); font-size: 14px; margin-left: 24px; font-weight: 500; }
+
+  /* Buy buttons */
+  .btn-buy {
+    display: inline-block;
+    background: var(--clay);
+    color: #fff;
+    padding: 17px 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background .15s, transform .05s;
+    box-shadow: 0 10px 26px -10px rgba(184,92,56,0.55);
+  }
+  .btn-buy:hover { background: var(--clay-dark); text-decoration: none; }
+  .btn-buy:active { transform: translateY(1px); }
+  .trust {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* Sticky buy bar */
+  .buybar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    z-index: 90;
+    transform: translateY(110%);
+    transition: transform .25s ease;
+    box-shadow: 0 -8px 30px rgba(31,26,20,0.25);
+  }
+  .buybar.show { transform: translateY(0); }
+  .buybar .bb-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 16px; }
+  .buybar .bb-price { color: var(--beige); font-size: 14px; }
+  .buybar a.bb-btn {
+    background: var(--clay); color: #fff;
+    padding: 10px 22px; border-radius: 8px;
+    font-weight: 600; font-size: 14px; white-space: nowrap;
+  }
+  .buybar a.bb-btn:hover { background: var(--clay-dark); text-decoration: none; }
+
+  /* Hero */
+  .hero { padding: 72px 0 72px; border-bottom: 1px solid var(--line); }
+  .hero .grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .hero h1 { font-size: clamp(38px, 5vw, 58px); margin-bottom: 22px; }
+  .hero .lede { font-size: 19px; color: var(--ink-soft); max-width: 560px; margin-bottom: 34px; }
+  .hero .lede strong { color: var(--ink); }
+  .cover-wrap { position: relative; display: flex; justify-content: center; }
+  .cover-frame {
+    width: min(320px, 80%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 40px 90px -30px rgba(31,26,20,0.55);
+    transform: rotate(2deg);
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  .cover-frame img { width: 100%; display: block; }
+  .cover-badge {
+    position: absolute;
+    top: -14px; right: 4%;
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 9px 16px;
+    border-radius: 100px;
+    transform: rotate(4deg);
+    box-shadow: 0 10px 24px -8px rgba(31,26,20,0.5);
+  }
+
+  /* Credibility strip */
+  .creds { background: var(--cream-2); padding: 32px 0; border-bottom: 1px solid var(--line); }
+  .creds .list {
+    display: flex; flex-wrap: wrap; gap: 20px 48px; justify-content: center;
+    color: var(--ink-soft); font-size: 14px; font-weight: 500;
+  }
+  .creds .list span { white-space: nowrap; }
+  .creds .list .sep { color: var(--clay); opacity: 0.6; }
+
+  /* Problem */
+  .problem { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .problem .inner { max-width: 720px; margin: 0 auto; }
+  .problem h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 26px; }
+  .problem p { color: var(--ink-soft); margin: 0 0 18px; }
+  .problem p strong { color: var(--ink); }
+  .scene-list { margin: 30px 0; padding: 0; list-style: none; }
+  .scene-list li {
+    padding: 14px 0 14px 26px;
+    border-left: 3px solid var(--beige);
+    margin-bottom: 12px;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+  .scene-list li strong { color: var(--ink); }
+  .bookquote {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--clay);
+    border-radius: 12px;
+    padding: 26px 30px;
+    margin: 34px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .bookquote .src {
+    display: block;
+    margin-top: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 600;
+  }
+
+  /* Reframe / system */
+  .system { background: var(--ink); color: var(--cream); padding: 96px 0; }
+  .system .inner { max-width: 760px; margin: 0 auto; text-align: center; }
+  .system h2 { color: var(--cream); font-size: clamp(30px, 4vw, 44px); margin-bottom: 24px; }
+  .system p { color: rgba(250,245,238,0.82); margin: 0 auto 18px; max-width: 620px; }
+  .equation {
+    display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+    margin: 40px 0 10px;
+  }
+  .eq-part {
+    background: rgba(250,245,238,0.06);
+    border: 1px solid rgba(250,245,238,0.18);
+    border-radius: 12px;
+    padding: 20px 26px;
+    min-width: 170px;
+  }
+  .eq-part .eq-word { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; color: var(--cream); }
+  .eq-part .eq-sub { font-size: 13px; color: rgba(250,245,238,0.65); margin-top: 6px; }
+  .eq-plus { align-self: center; font-family: 'Fraunces', serif; font-size: 26px; color: var(--clay); }
+
+  /* Stats band */
+  .stats { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  .stats .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .stat .n { font-family: 'Fraunces', serif; font-weight: 700; font-size: clamp(38px, 4.5vw, 54px); color: var(--clay); letter-spacing: -0.03em; }
+  .stat .l { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; }
+
+  /* Chapters */
+  .chapters { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .chapters .head { max-width: 660px; margin: 0 auto 48px; text-align: center; }
+  .chapters h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 16px; }
+  .chapters .head p { color: var(--ink-soft); }
+  .chap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .chap {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .chap .n { font-family: 'Fraunces', serif; color: var(--clay); font-weight: 600; font-size: 13px; }
+
+  /* Previews */
+  .previews { padding: 96px 0; border-bottom: 1px solid var(--line); background: var(--cream-2); }
+  .previews .head { max-width: 660px; margin: 0 auto 48px; text-align: center; }
+  .previews h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 16px; }
+  .previews .head p { color: var(--ink-soft); }
+  .pv-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .pv {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 44px -24px rgba(31,26,20,0.35);
+  }
+  .pv img { width: 100%; display: block; }
+  .pv .cap {
+    padding: 12px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--line);
+  }
+
+  /* Formula anatomy */
+  .anatomy { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .anatomy .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+  .anatomy h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 20px; }
+  .anatomy .side p { color: var(--ink-soft); margin: 0 0 16px; }
+  .anatomy .side ul { list-style: none; padding: 0; margin: 26px 0 0; }
+  .anatomy .side li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex; gap: 14px; align-items: flex-start;
+    color: var(--ink-soft); font-size: 15.5px;
+  }
+  .anatomy .side li:last-child { border-bottom: 0; }
+  .anatomy .side li strong { color: var(--ink); }
+  .anatomy .side .num {
+    font-family: 'Fraunces', serif; color: var(--clay); font-weight: 600; font-size: 15px; min-width: 20px;
+  }
+  .fx-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 32px;
+    box-shadow: 0 30px 60px -30px rgba(31,26,20,0.4);
+  }
+  .fx-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay); margin-bottom: 6px; }
+  .fx-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 24px; margin-bottom: 18px; }
+  .fx-block { border-radius: 10px; padding: 16px 18px; margin-bottom: 12px; font-size: 14px; line-height: 1.55; }
+  .fx-block .lbl { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .fx-generic { background: var(--cream-2); color: var(--ink-soft); }
+  .fx-generic .lbl { color: var(--ink-soft); }
+  .fx-fbf { background: rgba(184,92,56,0.07); border: 1px solid rgba(184,92,56,0.25); color: var(--ink); }
+  .fx-fbf .lbl { color: var(--clay); }
+  .fx-say { background: var(--ink); color: var(--cream); font-family: 'Fraunces', serif; font-style: italic; font-size: 16px; }
+  .fx-say .lbl { color: var(--beige); font-family: 'Inter', sans-serif; font-style: normal; }
+  .fx-ages { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .fx-age { background: var(--clay); color: #fff; font-size: 11.5px; font-weight: 700; padding: 4px 12px; border-radius: 100px; }
+  .fx-note { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; }
+
+  /* Outcomes */
+  .outcomes { padding: 96px 0; border-bottom: 1px solid var(--line); background: var(--cream-2); }
+  .outcomes .head { max-width: 660px; margin: 0 auto 48px; text-align: center; }
+  .outcomes h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 16px; }
+  .outcomes .head p { color: var(--ink-soft); }
+  .out-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .out {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 24px 26px;
+  }
+  .out h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .out p { font-size: 14.5px; color: var(--ink-soft); margin: 0; }
+
+  /* Testimonials */
+  .proof { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .proof .head { max-width: 660px; margin: 0 auto 48px; text-align: center; }
+  .proof h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 16px; }
+  .proof .head p { color: var(--ink-soft); }
+  .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .t-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px 24px;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  .t-card .who {
+    margin-top: 14px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 600; color: var(--ink);
+  }
+  .t-card .who .av {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--cream-2); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; color: var(--clay); font-size: 14px;
+  }
+  .t-card .who .meta { color: var(--ink-soft); font-weight: 500; }
+
+  /* For / not for */
+  .fit { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .fit .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+  .fit-col { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 32px 34px; }
+  .fit-col.no { background: transparent; }
+  .fit-col h3 { font-size: 22px; margin-bottom: 18px; }
+  .fit-col ul { list-style: none; padding: 0; margin: 0; }
+  .fit-col li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--ink-soft); display: flex; gap: 12px; }
+  .fit-col li:last-child { border-bottom: 0; }
+  .fit-col .yes-mark { color: var(--sage); font-weight: 700; }
+  .fit-col .no-mark { color: var(--clay); font-weight: 700; }
+
+  /* About */
+  .about { padding: 96px 0; border-bottom: 1px solid var(--line); background: var(--cream-2); }
+  .about .grid { display: grid; grid-template-columns: 0.9fr 1.4fr; gap: 64px; align-items: center; max-width: 980px; margin: 0 auto; }
+  .about h2 { font-size: clamp(28px, 3.6vw, 38px); margin-bottom: 20px; }
+  .about p { color: var(--ink-soft); margin: 0 0 16px; }
+  .about .photo { border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px -25px rgba(31,26,20,0.45); }
+  .about .photo img { width: 100%; display: block; }
+
+  /* Price */
+  .pricing { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .pricing .inner { max-width: 560px; margin: 0 auto; text-align: center; }
+  .pricing h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 14px; }
+  .pricing .sub { color: var(--ink-soft); margin-bottom: 36px; }
+  .price-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 16px;
+    padding: 44px 40px;
+    box-shadow: 0 30px 70px -35px rgba(31,26,20,0.45);
+  }
+  .price-card .badge {
+    display: inline-block; background: var(--clay); color: #fff;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 18px;
+  }
+  .price-card .big {
+    font-family: 'Fraunces', serif; font-size: 60px; font-weight: 600;
+    letter-spacing: -0.03em; line-height: 1; margin-bottom: 6px;
+  }
+  .price-card .once { font-size: 13px; color: var(--ink-soft); margin-bottom: 28px; }
+  .price-card ul { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; }
+  .price-card li {
+    padding: 11px 0; border-bottom: 1px solid var(--line);
+    font-size: 15px; color: var(--ink-soft);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .price-card li:last-child { border-bottom: 0; }
+  .price-card li .ck { color: var(--clay); font-weight: 700; }
+  .price-card .btn-buy { width: 100%; }
+
+  /* FAQ */
+  .faq { padding: 96px 0; border-bottom: 1px solid var(--line); }
+  .faq .inner { max-width: 720px; margin: 0 auto; }
+  .faq h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 36px; text-align: center; }
+  .faq details {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 0 24px; margin-bottom: 12px;
+  }
+  .faq summary {
+    cursor: pointer; list-style: none;
+    font-weight: 600; font-size: 16px;
+    padding: 20px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: 'Fraunces', serif; font-size: 22px; color: var(--clay); flex-shrink: 0; }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq .a { padding: 0 0 20px; color: var(--ink-soft); font-size: 15.5px; }
+
+  /* Final CTA */
+  .final { background: var(--ink); color: var(--cream); padding: 100px 0; text-align: center; }
+  .final h2 { color: var(--cream); font-size: clamp(32px, 4.5vw, 48px); margin-bottom: 18px; }
+  .final p { color: rgba(250,245,238,0.78); max-width: 520px; margin: 0 auto 34px; }
+
+  /* Footer */
+  footer { padding: 48px 0 90px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+  footer .brand { font-size: 18px; margin-bottom: 12px; }
+  footer a { color: var(--ink-soft); margin: 0 12px; }
+
+  @media (max-width: 960px) {
+    .chap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pv-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .out-grid, .t-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 480px) {
+    .chap-grid { grid-template-columns: 1fr 1fr; }
+    .chap { font-size: 12.5px; padding: 12px 12px; overflow-wrap: anywhere; }
+    .stats .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .hero { padding: 48px 0 56px; }
+    .hero .grid, .anatomy .grid, .about .grid, .fit .grid { grid-template-columns: 1fr; gap: 44px; }
+    .cover-wrap { order: -1; }
+    .stats .grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+    .out-grid, .t-grid { grid-template-columns: 1fr; }
+    .creds .list { gap: 12px 20px; }
+    .creds .list .sep { display: none; }
+    .topnav { display: none; }
+    .buybar .bb-title { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <a href="index.html" class="brand" style="text-decoration:none;">Raising Jordans<span class="dot">.</span></a>
+    <nav class="topnav">
+      <a href="index.html#about">About Madison</a>
+      <a href="index.html#guide">Free Guide</a>
+      <a href="guidebook.html" style="color: var(--clay); font-weight: 600;">Guidebook</a>
+      <a href="https://www.tiktok.com/@raisingjordans" target="_blank" rel="noopener">TikTok</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">The Capable Toddler · For moms of kids ages 1 to 4</div>
+      <h1>Every skill you wait on becomes a battle you fight later.</h1>
+      <p class="lede">
+        Sleep. Potty. Meltdowns. Listening. You were told to wait until your toddler is ready. <strong>The Capable Toddler</strong> is the complete system that goes first instead: 20 battles, 40 word-for-word formulas, and one calm plan for the years that decide everything.
+      </p>
+      <a class="btn-buy js-buy" href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Get the Guidebook · $9.99</a>
+      <div class="trust">Instant download · 163 designed pages · Read on phone, tablet, or print</div>
+    </div>
+    <div class="cover-wrap">
+      <div class="cover-badge">163 PAGES</div>
+      <div class="cover-frame">
+        <img src="preview-cover.jpg" alt="The Capable Toddler Guidebook cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="creds">
+  <div class="wrap">
+    <div class="list">
+      <span>Family-run daycare since age 3</span>
+      <span class="sep">/</span>
+      <span>Credentialed elementary teacher</span>
+      <span class="sep">/</span>
+      <span>Au pair, high profile family</span>
+      <span class="sep">/</span>
+      <span>Maternity photographer</span>
+      <span class="sep">/</span>
+      <span>Toddler mom, right now</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap inner">
+    <div class="eyebrow">The problem</div>
+    <h2>"Wait until they're ready" is the most expensive advice in motherhood.</h2>
+    <p>You know these nights. You have lived these afternoons.</p>
+    <ul class="scene-list">
+      <li><strong>Bedtime is a 45-minute negotiation</strong> that ends with someone crying. Some nights it is not the toddler.</li>
+      <li><strong>You have left a restaurant before the entrees arrived,</strong> carrying a screaming child past tables of people pretending not to look.</li>
+      <li><strong>You are on your third potty chart.</strong> The stickers work for four days. Then they do not.</li>
+      <li><strong>You Google "is this normal" at midnight</strong> and get seventeen contradictory answers from strangers.</li>
+    </ul>
+    <p>None of this means your kid is broken, and it does not mean you are failing. It means you were handed advice built on waiting: wait until they show signs, wait until they want to, wait until they are ready.</p>
+    <div class="bookquote">
+      "While you wait, the easy window quietly closes, and the thing that could have been simple at sixteen months becomes a battle at three."
+      <span class="src">From the introduction, Foundation Before Freedom</span>
+    </div>
+    <p><strong>The stakes are real.</strong> Every month spent waiting is a month the window narrows. The tantrum gets more practiced. The pattern gets more permanent. And you get more tired.</p>
+  </div>
+</section>
+
+<!-- SYSTEM -->
+<section class="system">
+  <div class="wrap inner">
+    <div class="eyebrow" style="color: var(--clay);">The system</div>
+    <h2>Foundation Before Freedom.</h2>
+    <p>You do not wait for your child to be ready. You build the structure first, and their capability, confidence, and freedom come out the other side of it.</p>
+    <p style="font-family: 'Fraunces', serif; font-size: 21px; color: var(--cream);">"The readiness everyone tells you to wait for is not the starting line. It is the finish line. And you are the one who gets them there."</p>
+    <div class="equation">
+      <div class="eq-part">
+        <div class="eq-word">Connection</div>
+        <div class="eq-sub">They trust you enough to follow</div>
+      </div>
+      <div class="eq-plus">+</div>
+      <div class="eq-part">
+        <div class="eq-word">Regulation</div>
+        <div class="eq-sub">You stay the calm in the room</div>
+      </div>
+      <div class="eq-plus">+</div>
+      <div class="eq-part">
+        <div class="eq-word">Skill</div>
+        <div class="eq-sub">Built in small, designed steps</div>
+      </div>
+    </div>
+    <p style="margin-top: 28px; font-size: 15px;">That is the Capable Kid Equation, and the Guidebook installs it into every battle of the toddler years, one formula at a time.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap grid">
+    <div class="stat"><div class="n">20</div><div class="l">Toddler battles covered</div></div>
+    <div class="stat"><div class="n">40</div><div class="l">Named formulas</div></div>
+    <div class="stat"><div class="n">37</div><div class="l">Word-for-word scripts</div></div>
+    <div class="stat"><div class="n">163</div><div class="l">Designed pages</div></div>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section class="chapters">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What's inside</div>
+      <h2>Name the battle. There's a chapter for it.</h2>
+      <p>Twenty chapters. Each one gives you two named formulas, the exact words to say, what NOT to do, and how to adjust for your child's age from 12 months to 3 years and beyond.</p>
+    </div>
+    <div class="chap-grid">
+      <div class="chap"><span class="n">01</span>Transitions</div>
+      <div class="chap"><span class="n">02</span>Meltdowns</div>
+      <div class="chap"><span class="n">03</span>Defiance</div>
+      <div class="chap"><span class="n">04</span>Screen Weaning</div>
+      <div class="chap"><span class="n">05</span>Sleep Resistance</div>
+      <div class="chap"><span class="n">06</span>Not Listening</div>
+      <div class="chap"><span class="n">07</span>Hitting &amp; Biting</div>
+      <div class="chap"><span class="n">08</span>Independence-Building</div>
+      <div class="chap"><span class="n">09</span>Eating</div>
+      <div class="chap"><span class="n">10</span>The "Why" Phase</div>
+      <div class="chap"><span class="n">11</span>Separation Anxiety</div>
+      <div class="chap"><span class="n">12</span>Sibling Dynamics</div>
+      <div class="chap"><span class="n">13</span>Emotional Regulation</div>
+      <div class="chap"><span class="n">14</span>Potty Training</div>
+      <div class="chap"><span class="n">15</span>Whining</div>
+      <div class="chap"><span class="n">16</span>Getting Dressed &amp; Ready</div>
+      <div class="chap"><span class="n">17</span>Public Behavior</div>
+      <div class="chap"><span class="n">18</span>Language &amp; Speech</div>
+      <div class="chap"><span class="n">19</span>Mom Guilt &amp; Consistency</div>
+      <div class="chap"><span class="n">20</span>Raising a Confident Kid</div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEWS -->
+<section class="previews">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Look inside</div>
+      <h2>Real pages from the book you're buying.</h2>
+      <p>No stock mockups. These are actual pages from the Guidebook, exactly as they'll look on your phone or printed on your fridge.</p>
+    </div>
+    <div class="pv-row">
+      <div class="pv"><img src="preview-intro.png" alt="Introduction page: Foundation Before Freedom" loading="lazy" /><div class="cap">The philosophy, in two pages</div></div>
+      <div class="pv"><img src="preview-map.png" alt="The Milestone Map development chart" loading="lazy" /><div class="cap">The Milestone Map, ages 1 to 4</div></div>
+      <div class="pv"><img src="preview-exit.png" alt="Formula page: The Confident Exit" loading="lazy" /><div class="cap">A formula page, word for word</div></div>
+      <div class="pv"><img src="preview-tracker.png" alt="21-Day Tracker printable" loading="lazy" /><div class="cap">Printables: tracker, sticker chart</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULA ANATOMY -->
+<section class="anatomy">
+  <div class="wrap grid">
+    <div class="side">
+      <div class="eyebrow">How the formulas work</div>
+      <h2>Not theory. A move you run tonight.</h2>
+      <p>Every formula in the Guidebook hands you the same five things, so you are never improvising in the hard moment:</p>
+      <ul>
+        <li><span class="num">1</span><span><strong>The reframe.</strong> What generic advice says, and what Foundation Before Freedom says instead.</span></li>
+        <li><span class="num">2</span><span><strong>The strider move.</strong> How to practice the skill in low-stakes moments, before it counts.</span></li>
+        <li><span class="num">3</span><span><strong>The exact words.</strong> A SAY THIS script you can use tonight, word for word.</span></li>
+        <li><span class="num">4</span><span><strong>What NOT to do.</strong> The common move that quietly makes it worse.</span></li>
+        <li><span class="num">5</span><span><strong>Apply it by age.</strong> The same formula, adjusted for 12 months, 15 months, 2 years, 30 months, and 3 plus.</span></li>
+      </ul>
+      <p style="margin-top: 24px;">Here is a real one, straight from the Separation Anxiety chapter. There are 39 more like it inside.</p>
+    </div>
+    <div class="fx-card">
+      <div class="fx-tag">Formula #2 · Separation Anxiety</div>
+      <div class="fx-title">The Confident Exit</div>
+      <div class="fx-block fx-generic">
+        <span class="lbl">Generic advice says</span>
+        Ease the transition, linger if they are upset, and keep coming back to comfort them until they settle.
+      </div>
+      <div class="fx-block fx-fbf">
+        <span class="lbl">Foundation Before Freedom says</span>
+        Your goodbye is not a negotiation with your child's feelings. It is a structure you hold. A calm parent tells the nervous system that this is safe.
+      </div>
+      <div class="fx-block fx-say">
+        <span class="lbl">Say this</span>
+        "I love you. I always come back. See you after nap."
+      </div>
+      <div class="fx-ages">
+        <span class="fx-age">12 mo</span>
+        <span class="fx-age">15 mo</span>
+        <span class="fx-age">2 yr</span>
+        <span class="fx-age">30 mo</span>
+        <span class="fx-age">3 yr+</span>
+      </div>
+      <div class="fx-note">Plus the strider practice, the what-not-to-do, and the full age-by-age breakdown, inside the book.</div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What changes</div>
+      <h2>Two weeks in, your house runs differently.</h2>
+      <p>This is what the system trains you to do. Not someday. Starting the night you download it.</p>
+    </div>
+    <div class="out-grid">
+      <div class="out"><h3>Bedtime ends without a fight</h3><p>You run The Bedtime Architecture instead of negotiating. The sequence does the work your willpower used to do.</p></div>
+      <div class="out"><h3>Restaurants stop being a gamble</h3><p>The Restaurant Pre-Load and The Table Structure mean you walk in with a plan, not a prayer.</p></div>
+      <div class="out"><h3>You stop repeating yourself</h3><p>The Word Economy Rule replaces the twelve reminders with one sentence that holds.</p></div>
+      <div class="out"><h3>Meltdowns get shorter</h3><p>You become The Regulated Parent Response. Your calm is the tool, and the book shows you how to hold it.</p></div>
+      <div class="out"><h3>Potty training runs on the window, not the chart</h3><p>The cornerstone chapter walks the whole arc, built on timing instead of bribery.</p></div>
+      <div class="out"><h3>You stop Googling at midnight</h3><p>Name the battle, open the chapter, run the formula. You have a system you trust, and it lives on your phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!--
+  ============================================================
+  PLACEHOLDER TESTIMONIALS: REPLACE BEFORE DRIVING TRAFFIC.
+  These are drafted placeholders so the section is designed and
+  ready. Swap each quote with a REAL comment from Madison's
+  TikTok (@raisingjordans) before the link goes in her bio.
+  Keep them short, keep the mom's first name or handle style.
+  ============================================================
+-->
+<section class="proof">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">From the comments</div>
+      <h2>Moms are already running this system.</h2>
+      <p>Pulled from the comment sections at @raisingjordans, where these formulas show up on camera every week.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        "Tried the goodbye script from your video this morning. First drop-off in MONTHS with no tears. I cried in the car, but happy tears."
+        <div class="who"><span class="av">K</span> Kayla <span class="meta">· mom of a 2-year-old</span></div>
+      </div>
+      <div class="t-card">
+        "The bedtime sequence changed our whole house. My husband thought I hired someone. It was a 30-second video and a sticky note on the door."
+        <div class="who"><span class="av">M</span> Mariah <span class="meta">· mom of two under 4</span></div>
+      </div>
+      <div class="t-card">
+        "I did the pause-before-helping thing for one week and my 18-month-old now puts her own shoes on. HER OWN SHOES."
+        <div class="who"><span class="av">J</span> Jess <span class="meta">· first-time mom</span></div>
+      </div>
+      <div class="t-card">
+        "Your restaurant video saved our anniversary dinner. The pre-load thing is witchcraft. We ate a whole meal IN PUBLIC."
+        <div class="who"><span class="av">D</span> Dani <span class="meta">· mom of a 3-year-old</span></div>
+      </div>
+      <div class="t-card">
+        "As a daycare teacher: everything this woman says is what we actually do in the classroom. Parents, listen to her."
+        <div class="who"><span class="av">R</span> Rachel <span class="meta">· early childhood educator</span></div>
+      </div>
+      <div class="t-card">
+        "I stopped saying 'what do you say' like you said and just modeled it. Three weeks later he thanked the checkout lady unprompted. I about fell over."
+        <div class="who"><span class="av">A</span> Amber <span class="meta">· mom of a 2.5-year-old</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="fit">
+  <div class="wrap">
+    <div class="grid">
+      <div class="fit-col">
+        <h3>This is for you if</h3>
+        <ul>
+          <li><span class="yes-mark">✓</span>You have a child between 1 and 4, or one on the way</li>
+          <li><span class="yes-mark">✓</span>You are in the thick of a specific battle right now: sleep, potty, meltdowns, hitting, eating</li>
+          <li><span class="yes-mark">✓</span>You want the exact words, not another vague philosophy</li>
+          <li><span class="yes-mark">✓</span>You are willing to go first and hold a structure for two weeks</li>
+        </ul>
+      </div>
+      <div class="fit-col no">
+        <h3>It is not for you if</h3>
+        <ul>
+          <li><span class="no-mark">✕</span>You want a trick that fixes everything by Friday without changing anything you do</li>
+          <li><span class="no-mark">✕</span>You believe toddlers should lead and adults should follow</li>
+          <li><span class="no-mark">✕</span>You are looking for medical or therapeutic advice. This is parenting structure, not clinical care</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap grid">
+    <div class="photo">
+      <img src="madison-tyler.jpg" alt="Madison Jordan" loading="lazy" />
+    </div>
+    <div>
+      <div class="eyebrow">Who wrote this</div>
+      <h2>I'm Madison. I went first, so you don't have to guess.</h2>
+      <p>I spent years as an au pair for a high profile family in Australia. Half a decade as an elementary teacher. A lifetime in childcare before becoming a mom myself. I help mothers raise capable, confident, resilient kids without the chaos.</p>
+      <p>The Capable Toddler is everything I know about the ages that matter most, written the way I wish someone had handed it to me: one battle at a time, with the exact words, and zero judgment.</p>
+      <p style="font-family: 'Fraunces', serif; font-size: 19px; color: var(--ink);">"The children who thrive are not the ones who were waited on. They are the ones whose grown-ups went first."</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="buy">
+  <div class="wrap inner">
+    <div class="eyebrow">The decision</div>
+    <h2>Less than the potty chart that didn't work.</h2>
+    <p class="sub">You have spent more than this on a toy that held their attention for nine minutes. This one is for you, and it works on every battle in the house.</p>
+    <div class="price-card">
+      <span class="badge">The Capable Toddler Guidebook</span>
+      <div class="big">$9.99</div>
+      <div class="once">One time. No subscription. Yours forever.</div>
+      <ul>
+        <li><span class="ck">✓</span>The full 163-page designed Guidebook, instant download</li>
+        <li><span class="ck">✓</span>All 20 battle chapters with 40 named formulas</li>
+        <li><span class="ck">✓</span>37 word-for-word SAY THIS scripts</li>
+        <li><span class="ck">✓</span>Every formula adjusted by age, 12 months to 3 plus</li>
+        <li><span class="ck">✓</span>The Milestone Map and printable tools: 21-Day Tracker, Sticker Chart</li>
+        <li><span class="ck">✓</span>Read on phone, tablet, computer, or print it</li>
+      </ul>
+      <a class="btn-buy js-buy" href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Get the Guidebook · $9.99</a>
+      <div class="trust">Secure checkout by Stripe · Download link the second you pay</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap inner">
+    <h2>Questions moms ask before buying</h2>
+    <details>
+      <summary>What ages is this for?</summary>
+      <div class="a">It is built for the toddler window, roughly 1 to 4 years old. Every formula includes age-by-age adjustments from 12 months through 3 and beyond, so it meets your child exactly where they are. Pregnant and planning ahead? Even better. You will walk in with the system already installed.</div>
+    </details>
+    <details>
+      <summary>What exactly do I get?</summary>
+      <div class="a">A 163-page designed PDF, delivered instantly after checkout. Twenty battle chapters, 40 named formulas, 37 word-for-word scripts, the Milestone Map, and printable tools including the 21-Day Tracker and Sticker Chart. It reads beautifully on a phone and prints clean.</div>
+    </details>
+    <details>
+      <summary>How is it delivered?</summary>
+      <div class="a">You check out through Stripe, the same processor used by millions of businesses. The moment payment goes through you are redirected straight to your download page. No waiting for an email.</div>
+    </details>
+    <details>
+      <summary>Is this just the free guide with a price tag?</summary>
+      <div class="a">No. The free Starter Guide is 8 habits, the philosophy. The Guidebook is the full toddler system: every major battle of ages 1 to 4, each with formulas, scripts, and age breakdowns. If the free guide is the trailer, this is the movie.</div>
+    </details>
+    <details>
+      <summary>My kid is already 3. Is it too late?</summary>
+      <div class="a">No. As the book puts it, the windows "mark when capability opens, not when it closes." Every chapter includes the 3-plus version of the formula, and several are written specifically for rebuilding patterns that have already hardened.</div>
+    </details>
+    <details>
+      <summary>I'm exhausted. How long does it take to read?</summary>
+      <div class="a">It is built as a reference, not a novel. Read the opening system in about 20 minutes, then jump straight to the battle happening in your house tonight. Each chapter stands alone.</div>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow" style="color: var(--clay);">One more thing</div>
+    <h2>Your toddler isn't waiting.<br />The window is open right now.</h2>
+    <p>Tonight there will be a bedtime. This week there will be a meltdown. You can meet both with the same improvised patience as last week, or with a formula that was built for exactly that moment.</p>
+    <a class="btn-buy js-buy" href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Get the Guidebook · $9.99</a>
+    <div class="trust" style="color: rgba(250,245,238,0.6);">Instant download · Yours forever</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Raising Jordans<span style="color: var(--clay);">.</span></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#guide">Free Guide</a>
+      <a href="https://www.tiktok.com/@raisingjordans" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:hello@raisingjordans.com">Contact</a>
+    </div>
+    <div style="margin-top: 18px; font-size: 12px; opacity: 0.7;">
+      &copy; <span id="yr"></span> Raising Jordans. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky buy bar -->
+<div class="buybar" id="buybar">
+  <span class="bb-title">The Capable Toddler</span>
+  <span class="bb-price">$9.99 · instant download</span>
+  <a class="bb-btn js-buy" href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Get the Guidebook</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Sticky buy bar: show after scrolling past the hero, hide near the pricing card and final CTA
+  (function() {
+    var bar = document.getElementById('buybar');
+    var hero = document.querySelector('.hero');
+    var pricing = document.getElementById('buy');
+    var final = document.querySelector('.final');
+    function onScroll() {
+      var past = window.scrollY > hero.offsetHeight;
+      var r1 = pricing.getBoundingClientRect();
+      var r2 = final.getBoundingClientRect();
+      var overBuy = (r1.top < window.innerHeight && r1.bottom > 0) || (r2.top < window.innerHeight && r2.bottom > 0);
+      bar.classList.toggle('show', past && !overBuy);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>

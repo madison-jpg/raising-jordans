@@ -47,6 +47,20 @@
 
   .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
+  /* Announcement bar */
+  .announce {
+    display: block;
+    background: var(--clay);
+    color: #fff;
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 10px 18px;
+    letter-spacing: 0.02em;
+  }
+  .announce:hover { background: var(--clay-dark); text-decoration: none; }
+  .announce .arrow { opacity: 0.85; margin-left: 6px; }
+
   /* Top bar */
   .topbar {
     padding: 22px 0;
@@ -397,13 +411,15 @@
 </head>
 <body>
 
+<a class="announce" href="guidebook.html">NEW: The Capable Toddler Guidebook is here. 20 battles, 40 formulas, $9.99.<span class="arrow">See what's inside &rarr;</span></a>
+
 <header class="topbar">
   <div class="wrap row">
     <div class="brand">Raising Jordans<span class="dot">.</span></div>
     <nav class="topnav">
       <a href="#about">About Madison</a>
       <a href="#guide">Free Guide</a>
-      <a href="#ebook" style="color: var(--clay); font-weight: 600;">Guidebook</a>
+      <a href="guidebook.html" style="color: var(--clay); font-weight: 600;">Guidebook</a>
       <a href="https://www.tiktok.com/@raisingjordans" target="_blank" rel="noopener">TikTok</a>
     </nav>
   </div>
@@ -504,18 +520,18 @@
 
 <section class="ebook" id="ebook">
   <div class="wrap inner">
-    <span class="badge">Guidebook</span>
+    <span class="badge">The Guidebook</span>
     <h2>The Capable Toddler</h2>
-    <p class="sub">A practical guide for the years that actually matter most — written from 20+ years working with children of every background, including the toddler I'm raising at home right now.</p>
+    <p class="sub">The complete system for ages 1 to 4. Twenty battles. Forty word-for-word formulas. One calm plan, written from a lifetime in childcare and the toddler I'm raising at home right now.</p>
     <div class="features">
-      <div class="feat"><span class="feat-check">✓</span><span>What the toddler years are really about — and what most moms are getting wrong</span></div>
-      <div class="feat"><span class="feat-check">✓</span><span>Daily routines that build independence before they ever start school</span></div>
-      <div class="feat"><span class="feat-check">✓</span><span>How to handle meltdowns without losing your mind or undoing your work</span></div>
-      <div class="feat"><span class="feat-check">✓</span><span>The language patterns that build confidence — pulled from classrooms, au pair work, and elite families</span></div>
+      <div class="feat"><span class="feat-check">✓</span><span>Every major toddler battle: sleep, potty, meltdowns, hitting, eating, listening, and 14 more</span></div>
+      <div class="feat"><span class="feat-check">✓</span><span>40 named formulas with the exact words to say, and what NOT to do</span></div>
+      <div class="feat"><span class="feat-check">✓</span><span>Every formula adjusted by age, from 12 months to 3 and beyond</span></div>
+      <div class="feat"><span class="feat-check">✓</span><span>163 designed pages, the Milestone Map, and printable tools</span></div>
     </div>
     <div class="price">$9.99</div>
-    <a class="btn-buy" href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Get the Guidebook — $9.99</a>
-    <div class="note">Instant PDF download. Yours to keep.</div>
+    <a class="btn-buy" href="guidebook.html">See what's inside &rarr;</a>
+    <div class="note">Instant PDF download. Yours to keep. <a href="https://buy.stripe.com/cNieVf1mY7yr3P108r5ZC00" target="_blank" rel="noopener">Ready now? Buy it here.</a></div>
   </div>
 </section>
 
@@ -537,7 +553,7 @@
     <div>
       <a href="https://www.tiktok.com/@raisingjordans" target="_blank" rel="noopener">TikTok</a>
       <a href="#guide">Free Guide</a>
-      <a href="#ebook">Guidebook</a>
+      <a href="guidebook.html">Guidebook</a>
       <a href="mailto:hello@raisingjordans.com">Contact</a>
     </div>
     <div style="margin-top: 18px; font-size: 12px; opacity: 0.7;">

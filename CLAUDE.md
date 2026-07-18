@@ -9,6 +9,8 @@ Madison Jordan is building a motherhood brand, "Raising Jordans," on TikTok @rai
 - `the-capable-toddler.html` — the Guidebook reader (unlisted URL, the paid product)
 - `the-capable-toddler.pdf` — the sellable PDF, rendered from the reader HTML. IMPORTANT: after ANY content edit to `the-capable-toddler.html`, re-render this PDF (headless Chrome: `--headless --no-pdf-header-footer --virtual-time-budget=20000 --print-to-pdf`) and commit both together, or buyers get an outdated book.
 - `download.html` — post-purchase success page (Stripe redirects here after payment; button downloads the PDF)
+- `guidebook.html` — the dedicated Guidebook SALES PAGE (linked from nav, announcement bar, free guide promos). IMPORTANT: its testimonial section currently holds PLACEHOLDER quotes (marked with an HTML comment). Replace them with REAL TikTok comments before driving traffic. Everything on the site should funnel visitors here.
+- `preview-*.png` / `preview-cover.jpg` — real page renders from the PDF used on the sales page. Re-generate if the book design changes materially.
 - `madison-tyler.jpg` — hero photo
 
 ## Deploy workflow (memorize this)
